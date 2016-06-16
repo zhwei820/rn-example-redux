@@ -12,9 +12,9 @@ import * as appActions from '../reducers/app/actions';
 
 
 import Button from 'apsl-react-native-button';
-import TouchButton from '../diy/TouchButton';
+import TouchButton from '../../diy/TouchButton';
 
-import {Image as ImageP} from 'react-native-image-progress';
+import Image from 'react-native-image-progress';
 import ProgressBar from 'react-native-progress/Bar';
 
 
@@ -56,13 +56,11 @@ class LoginScreen extends Component {
         <Text style={{fontWeight: '500'}}>Array of arrays prop: {JSON.stringify(this.props.obj.arr2)}</Text>
 
 
-
-
         <TouchButton style={styles.style3} textStyle={styles.textStyle}
           onPress={() => {
               console.log("10");
           }}>
-            Increment async!
+            World
         </TouchButton>
 
         <TouchButton
