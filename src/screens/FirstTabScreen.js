@@ -16,8 +16,6 @@ class FirstTabScreen extends Component {
     statusBarColor: '#303F9F',
     toolBarColor: '#3F51B5',
     navigationBarColor: '#303F9F',
-    buttonsTint: '#FFFFFF',
-    titleColor: '#FFFFFF',
     tabSelectedTextColor: '#FFA000',
     tabNormalTextColor: '#FFC107',
     tabIndicatorColor: '#FFA000'
@@ -83,6 +81,13 @@ class FirstTabScreen extends Component {
         <Text style={{fontWeight: '500'}}>Number prop: {this.props.num}</Text>
         <Text style={{fontWeight: '500'}}>Object prop: {this.props.obj.str}</Text>
         <Text style={{fontWeight: '500'}}>Array prop: {this.props.obj.arr[0].str}</Text>
+
+
+
+        <TouchableOpacity onPress={ this.onShowViewPager.bind(this) }>
+          <Text style={styles.button}>ViewPager Screen</Text>
+        </TouchableOpacity>
+
       </View>
     );
   }
@@ -127,6 +132,25 @@ class FirstTabScreen extends Component {
         num: 1234
       }
     });
+  }
+  onShowViewPager(){
+    this.props.navigator.push({
+      title: "More",
+      screen: "example.ViewPagerScreen",
+      passProps: {
+        str: 'This is a prop passed in \'navigator.push()\'!',
+        obj: {
+          str: 'This is a prop passed in an object!',
+          arr: [
+            {
+              str: 'This is a prop in an object in an array in an object!'
+            }
+          ]
+        },
+        num: 1234
+      }
+    });
+
   }
 }
 
