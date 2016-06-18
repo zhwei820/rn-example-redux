@@ -35,8 +35,8 @@ class PullRefreshList extends Component {
     setTimeout(() => {
       var header = 'Header '+page;
       var rows = {};
-      rows[header] = ['row '+((page - 1) * 9 + 1), 'row '+((page - 1) * 9 + 2), 'row '+((page - 1) * 9 + 3), 'row '+((page - 1) * 9 + 3 + 1), 'row '+((page - 1) * 9 + 3 + 2), 'row '+((page - 1) * 9 + 6 + 3 + 3), 'row '+((page - 1) * 9 + 6 + 1), 'row '+((page - 1) * 9 + 2 + 6), 'row '+((page - 1) * 9 + 3), 'row '+((page - 1) * 9 + 1), 'row '+((page - 1) * 9 + 2), 'row '+((page - 1) * 9 + 3), 'row '+((page - 1) * 9 + 3 + 1), 'row '+((page - 1) * 9 + 3 + 2), 'row '+((page - 1) * 9 + 6 + 3 + 3), 'row '+((page - 1) * 9 + 6 + 1), 'row '+((page - 1) * 9 + 2 + 6), 'row '+((page - 1) * 9 + 3)];
-      if (page === 5) {
+      rows[header] = ['row '+(page * 9 + 1), 'row '+(page * 9 + 2), 'row '+(page * 9 + 3), 'row '+(page * 9 + 3 + 1), 'row '+(page * 9 + 3 + 2), 'row '+(page * 9 + 6 + 3 + 3), 'row '+(page * 9 + 6 + 1), 'row '+(page * 9 + 2 + 6), 'row '+(page * 9 + 3), 'row '+(page * 9 + 1)];
+      if (page === 100) {
         callback(rows, {
           allLoaded: true, // the end of the list is reached
         });
@@ -75,15 +75,15 @@ class PullRefreshList extends Component {
    * Render a row
    * @param {object} rowData Row data
    */
-  _renderSectionHeaderView = (sectionData, sectionID) => {
-    return (
-      <View style={customStyles.header}>
-        <Text style={customStyles.headerTitle}>
-          {sectionID}
-        </Text>
-      </View>
-    );
-  }
+  // _renderSectionHeaderView = (sectionData, sectionID) => {
+  //   return (
+  //     <View style={customStyles.header}>
+  //       <Text style={customStyles.headerTitle}>
+  //         {sectionID}
+  //       </Text>
+  //     </View>
+  //   );
+  // }
 
   /**
    * Render the refreshable view when waiting for refresh
@@ -227,7 +227,7 @@ class PullRefreshList extends Component {
           pagination={true} // enable infinite scrolling using touch to load more
           paginationFetchigView={this._renderPaginationFetchigView}
           paginationAllLoadedView={this._renderPaginationAllLoadedView}
-          paginationWaitingView={this._renderPaginationWaitingView}
+          paginationWaitingView={this._renderPaginationFetchigView}
 
           refreshable={true} // enable pull-to-refresh for iOS and touch-to-refresh for Android
           refreshableViewHeight={50} // correct height is mandatory
@@ -241,7 +241,7 @@ class PullRefreshList extends Component {
           renderSeparator={this._renderSeparatorView}
 
           withSections={true} // enable sections
-          sectionHeaderView={this._renderSectionHeaderView}
+          sectionHeaderView={this._renderSeparatorView}
 
           PullToRefreshViewAndroidProps={{
             colors: ['#fff'],
