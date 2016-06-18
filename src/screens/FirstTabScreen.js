@@ -38,10 +38,10 @@ class FirstTabScreen extends Component {
   constructor(props) {
     super(props);
     // if you want to listen on navigator events, set this up
-    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
   }
 
-  onNavigatorEvent(event) {
+  onNavigatorEvent = (event) => {
     switch (event.id) {
       case 'edit':
         Alert.alert('NavBar', 'Edit button pressed1');
@@ -65,15 +65,15 @@ class FirstTabScreen extends Component {
           <Text style={{fontWeight: '500'}}>Same Counter: </Text> {this.props.counter.count}
         </Text>
 
-        <TouchableOpacity onPress={ this.onIncrementPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onIncrementPress }>
           <Text style={styles.button}>Increment Counter</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={ this.onPushPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onPushPress }>
           <Text style={styles.button}>Push Screen</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={ this.onShowModalPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onShowModalPress }>
           <Text style={styles.button}>Modal Screen</Text>
         </TouchableOpacity>
 
@@ -82,21 +82,23 @@ class FirstTabScreen extends Component {
         <Text style={{fontWeight: '500'}}>Object prop: {this.props.obj.str}</Text>
         <Text style={{fontWeight: '500'}}>Array prop: {this.props.obj.arr[0].str}</Text>
 
-
-
-        <TouchableOpacity onPress={ this.onShowViewPager.bind(this) }>
+        <TouchableOpacity onPress={ this.onShowViewPager }>
           <Text style={styles.button}>ViewPager Screen</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={ this.onShowPullRefreshList }>
+          <Text style={styles.button}>PullRefreshList Screen</Text>
         </TouchableOpacity>
 
       </View>
     );
   }
 
-  onIncrementPress() {
+  onIncrementPress = () => {
     this.props.dispatch(counterActions.increment());
   }
 
-  onPushPress() {
+  onPushPress = () => {
     this.props.navigator.push({
       title: "More",
       screen: "example.PushedScreen",
@@ -115,7 +117,7 @@ class FirstTabScreen extends Component {
     });
   }
 
-  onShowModalPress() {
+  onShowModalPress = () => {
     this.props.navigator.showModal({
       title: "Modal Screen",
       screen: "example.ModalScreen",
@@ -133,10 +135,29 @@ class FirstTabScreen extends Component {
       }
     });
   }
-  onShowViewPager(){
+  onShowViewPager = () => {
     this.props.navigator.push({
       title: "More",
       screen: "example.ViewPagerScreen",
+      passProps: {
+        str: 'This is a prop passed in \'navigator.push()\'!',
+        obj: {
+          str: 'This is a prop passed in an object!',
+          arr: [
+            {
+              str: 'This is a prop in an object in an array in an object!'
+            }
+          ]
+        },
+        num: 1234
+      }
+    });
+  }
+
+  onShowPullRefreshList = () => {
+    this.props.navigator.push({
+      title: "Gifted ListView",
+      screen: "example.PullRefreshList",
       passProps: {
         str: 'This is a prop passed in \'navigator.push()\'!',
         obj: {

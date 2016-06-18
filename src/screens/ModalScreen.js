@@ -31,7 +31,7 @@ class PushedScreen extends Component {
   constructor(props) {
     super(props);
     this.bgColor = "#FFA000";
-    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
 
   }
 
@@ -53,7 +53,7 @@ class PushedScreen extends Component {
     };
 
 
-    onNavigatorEvent(event) {
+    onNavigatorEvent = (event) => {
       switch (event.id) {
         case 'edit':
           Alert.alert('NavBar', 'Edit button pressed');
@@ -69,7 +69,7 @@ class PushedScreen extends Component {
       }
     }
 
-  getRandomColor() {
+  getRandomColor = () => {
     var letters = '0123456789ABCDEF'.split('');
     var color = '#';
     for (var i = 0; i < 6; i++ ) {
@@ -86,21 +86,21 @@ class PushedScreen extends Component {
           <Text style={{fontWeight: '500'}}>Counter: </Text> {this.props.counter.count}
         </Text>
 
-        <TouchableOpacity onPress={ this.onIncrementPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onIncrementPress }>
           <Text style={styles.button}>Increment Counter</Text>
         </TouchableOpacity>
 
 
-        <TouchableOpacity onPress={ this.onShowModalPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onShowModalPress }>
           <Text style={styles.button}>Modal Screen</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={ this.onDismissModal.bind(this) }>
+        <TouchableOpacity onPress={ this.onDismissModal }>
           <Text style={styles.button}>Dismiss modal</Text>
         </TouchableOpacity>
 
 
-        <TouchableOpacity onPress={ this.onDismissAllModalsPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onDismissAllModalsPress }>
           <Text style={styles.button}>Dismiss all modals</Text>
         </TouchableOpacity>
 
@@ -115,11 +115,11 @@ class PushedScreen extends Component {
     );
   }
 
-  onIncrementPress() {
+  onIncrementPress = () => {
     this.props.dispatch(counterActions.increment());
   }
 
-  onShowModalPress() {
+  onShowModalPress = () => {
     this.props.navigator.showModal({
       title: "Modal Screen",
       screen: "example.ModalScreen",
@@ -138,11 +138,11 @@ class PushedScreen extends Component {
     });
   }
 
-  onDismissAllModalsPress() {
+  onDismissAllModalsPress = () => {
     this.props.navigator.dismissAllModals();
   }
 
-  onDismissModal() {
+  onDismissModal = () => {
     this.props.navigator.dismissModal();
   }
 

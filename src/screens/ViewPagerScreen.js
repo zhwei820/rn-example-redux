@@ -74,7 +74,7 @@ class ViewPagerScreen extends Component {
               isLoop={true}
               autoPlay={true}/>
 
-              <TouchableOpacity onPress={ this.onPopToRootPress.bind(this) }>
+              <TouchableOpacity onPress={ this.onPopToRootPress}>
                 <Text style={styles.button}>Pop to root</Text>
               </TouchableOpacity>
 
@@ -93,7 +93,7 @@ class ViewPagerScreen extends Component {
       );
   }
 
-  onPopToRootPress() {
+  onPopToRootPress = () => {
     this.props.navigator.popToRoot();
   }
 

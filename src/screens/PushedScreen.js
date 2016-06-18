@@ -31,7 +31,7 @@ class PushedScreen extends Component {
   constructor(props) {
     super(props);
     this.bgColor = "#FFA000";
-    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
 
   }
 
@@ -53,7 +53,7 @@ class PushedScreen extends Component {
     };
 
 
-    onNavigatorEvent(event) {
+    onNavigatorEvent = (event) => {
       switch (event.id) {
         case 'edit':
           Alert.alert('NavBar', 'Edit button pressed');
@@ -86,24 +86,24 @@ class PushedScreen extends Component {
           <Text style={{fontWeight: '500'}}>Counter: </Text> {this.props.counter.count}
         </Text>
 
-        <TouchableOpacity onPress={ this.onIncrementPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onIncrementPress }>
           <Text style={styles.button}>Increment Counter</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={ this.onPushPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onPushPress }>
           <Text style={styles.button}>Push Another</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={ this.onPopPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onPopPress }>
           <Text style={styles.button}>Pop Screen</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={ this.onShowModalPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onShowModalPress }>
           <Text style={styles.button}>Modal Screen</Text>
         </TouchableOpacity>
 
 
-        <TouchableOpacity onPress={ this.onPopToRootPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onPopToRootPress }>
           <Text style={styles.button}>Pop to root</Text>
         </TouchableOpacity>
 
@@ -118,11 +118,11 @@ class PushedScreen extends Component {
     );
   }
 
-  onIncrementPress() {
+  onIncrementPress = () => {
     this.props.dispatch(counterActions.increment());
   }
 
-  onPushPress() {
+  onPushPress = () => {
     this.props.navigator.push({
       title: "More",
       screen: "example.PushedScreen",
@@ -141,11 +141,11 @@ class PushedScreen extends Component {
     });
   }
 
-  onPopPress() {
+  onPopPress = () => {
     this.props.navigator.pop();
   }
 
-  onShowModalPress() {
+  onShowModalPress = () => {
     this.props.navigator.showModal({
       title: "Modal Screen",
       screen: "example.ModalScreen",
@@ -165,7 +165,7 @@ class PushedScreen extends Component {
   }
 
 
-  onPopToRootPress() {
+  onPopToRootPress = () => {
     this.props.navigator.popToRoot();
   }
 }

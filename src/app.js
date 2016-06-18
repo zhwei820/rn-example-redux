@@ -18,11 +18,11 @@ registerScreens(store, Provider);
 export default class App {
   constructor() {
     // since react-redux only works on components, we need to subscribe this class manually
-    store.subscribe(this.onStoreUpdate.bind(this));
+    store.subscribe(this.onStoreUpdate);
     store.dispatch(appActions.appInitialized());
   }
 
-  onStoreUpdate() {
+  onStoreUpdate = () => {
     const { root } = store.getState().app;
     // handle a root change
     // if your app doesn't change roots in runtime, you can remove onStoreUpdate() altogether

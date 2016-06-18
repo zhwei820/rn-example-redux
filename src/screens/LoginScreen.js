@@ -31,7 +31,7 @@ class LoginScreen extends Component {
     tabNormalTextColor: '#FFC107',
     tabIndicatorColor: '#FF4081'
   };
-  
+
   static propTypes = {
     str: PropTypes.string.isRequired,
     obj: PropTypes.object.isRequired,
@@ -50,11 +50,11 @@ class LoginScreen extends Component {
           <Text style={{fontWeight: '500'}}>Counter: </Text> {this.props.counter.count}
         </Text>
 
-        <TouchableOpacity onPress={ this.onIncrementPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onIncrementPress }>
           <Text style={styles.button}>Increment Counter</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={ this.onLoginPress.bind(this) }>
+        <TouchableOpacity onPress={ this.onLoginPress }>
           <Text style={styles.button}>Login</Text>
         </TouchableOpacity>
 
@@ -103,10 +103,10 @@ class LoginScreen extends Component {
       </View>
     );
   }
-  onIncrementPress() {
+  onIncrementPress = () => {
     this.props.dispatch(counterActions.increment());
   }
-  onLoginPress() {
+  onLoginPress = () => {
     this.props.dispatch(appActions.login());
   }
 }
