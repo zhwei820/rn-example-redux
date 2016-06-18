@@ -50,6 +50,16 @@ const styles = StyleSheet.create({
 });
 
 class ViewPagerScreen extends Component {
+
+  static navigatorStyle = {
+    statusBarColor: '#303F9F',
+    toolBarColor: '#3F51B5',
+    navigationBarColor: '#303F9F',
+    tabSelectedTextColor: '#FFA000',
+    tabNormalTextColor: '#FFC107',
+    tabIndicatorColor: '#FF4081'
+  };
+  
   static propTypes = {
     onNavigate: PropTypes.func.isRequired
   };
