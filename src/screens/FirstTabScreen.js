@@ -44,7 +44,7 @@ class FirstTabScreen extends Component {
   onNavigatorEvent(event) {
     switch (event.id) {
       case 'edit':
-        Alert.alert('NavBar', 'Edit button pressed');
+        Alert.alert('NavBar', 'Edit button pressed1');
         break;
 
       case 'add':
@@ -118,7 +118,7 @@ class FirstTabScreen extends Component {
   onShowModalPress() {
     this.props.navigator.showModal({
       title: "Modal Screen",
-      screen: "example.PushedScreen",
+      screen: "example.ModalScreen",
       passProps: {
         str: 'This is a prop passed in \'navigator.showModal()\'!',
         obj: {

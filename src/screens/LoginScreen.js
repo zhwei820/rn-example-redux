@@ -23,6 +23,15 @@ import ProgressBar from 'react-native-progress/Bar';
 // this is a traditional React component connected to the redux store
 class LoginScreen extends Component {
 
+  static navigatorStyle = {
+    statusBarColor: '#303F9F',
+    toolBarColor: '#3F51B5',
+    navigationBarColor: '#303F9F',
+    tabSelectedTextColor: '#FFA000',
+    tabNormalTextColor: '#FFC107',
+    tabIndicatorColor: '#FF4081'
+  };
+  
   static propTypes = {
     str: PropTypes.string.isRequired,
     obj: PropTypes.object.isRequired,

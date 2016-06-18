@@ -60,6 +60,7 @@ class SecondTabScreen extends Component {
   }
 
   onSetButton() {
+    console.warn("ddd");
     this.props.navigator.setButtons({
       rightButtons: [
         {

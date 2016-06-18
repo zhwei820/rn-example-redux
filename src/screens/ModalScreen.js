@@ -90,21 +90,18 @@ class PushedScreen extends Component {
           <Text style={styles.button}>Increment Counter</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={ this.onPushPress.bind(this) }>
-          <Text style={styles.button}>Push Another</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={ this.onPopPress.bind(this) }>
-          <Text style={styles.button}>Pop Screen</Text>
-        </TouchableOpacity>
 
         <TouchableOpacity onPress={ this.onShowModalPress.bind(this) }>
           <Text style={styles.button}>Modal Screen</Text>
         </TouchableOpacity>
 
+        <TouchableOpacity onPress={ this.onDismissModal.bind(this) }>
+          <Text style={styles.button}>Dismiss modal</Text>
+        </TouchableOpacity>
 
-        <TouchableOpacity onPress={ this.onPopToRootPress.bind(this) }>
-          <Text style={styles.button}>Pop to root</Text>
+
+        <TouchableOpacity onPress={ this.onDismissAllModalsPress.bind(this) }>
+          <Text style={styles.button}>Dismiss all modals</Text>
         </TouchableOpacity>
 
         <TextInput style={{height: 40, borderColor: 'gray', borderWidth: 1}}/>
@@ -120,29 +117,6 @@ class PushedScreen extends Component {
 
   onIncrementPress() {
     this.props.dispatch(counterActions.increment());
-  }
-
-  onPushPress() {
-    this.props.navigator.push({
-      title: "More",
-      screen: "example.PushedScreen",
-      passProps: {
-        passed: 'This is a prop passed in \'navigator.push()\'!',
-        obj: {
-          str: 'This is a prop passed in an object!',
-          arr: [
-            {
-              str: 'This is a prop in an object in an array in an object!'
-            }
-          ]
-        },
-        num: 1234
-      }
-    });
-  }
-
-  onPopPress() {
-    this.props.navigator.pop();
   }
 
   onShowModalPress() {
@@ -164,10 +138,14 @@ class PushedScreen extends Component {
     });
   }
 
-
-  onPopToRootPress() {
-    this.props.navigator.popToRoot();
+  onDismissAllModalsPress() {
+    this.props.navigator.dismissAllModals();
   }
+
+  onDismissModal() {
+    this.props.navigator.dismissModal();
+  }
+
 }
 
 const styles = StyleSheet.create({

@@ -38,8 +38,10 @@ export default class App {
         Navigation.startSingleScreenApp({
           screen: {
             screen: 'example.LoginScreen',
-            title: 'Login',
-            navigatorStyle: {}
+            title: 'Login_',
+            navigatorStyle: {
+
+            }
           },
           passProps: {
             str: 'This is a prop passed in \'startSingleScreenApp()\'!',
