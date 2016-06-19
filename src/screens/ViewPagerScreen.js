@@ -59,7 +59,7 @@ class ViewPagerScreen extends Component {
     tabNormalTextColor: '#FFC107',
     tabIndicatorColor: '#FF4081'
   };
-  
+
   static propTypes = {
     onNavigate: PropTypes.func.isRequired
   };
