@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 
-var ViewPager = require('../../third/react-native-viewpager');
+var ViewPager = require('react-native-viewpager');
 var deviceWidth = Dimensions.get('window').width;
 
  var IMGS = [
