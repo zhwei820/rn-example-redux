@@ -23,6 +23,7 @@ var GiftedListView = require('../../diy/react-native-gifted-listview/GiftedListV
 var GiftedSpinner = require('react-native-gifted-spinner');
 
 import ProductListRow from '../components/ProductListRow';
+import Banner from '../components/Banner';
 
 class PullRefreshList extends Component {
 
@@ -414,9 +415,17 @@ class PullRefreshList extends Component {
     );
   }
 
+  _onPressBanner = (url) => {
+    console.warn(url);
+    this.props.navigator.pop();
+    
+  }
+
   render() {
     return (
       <View style={screenStyles.container}>
+        <Banner onPressBanner={this._onPressBanner}>
+        </Banner>
         <GiftedListView
           rowView={this._renderRowView}
 

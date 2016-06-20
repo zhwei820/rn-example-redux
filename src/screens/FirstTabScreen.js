@@ -82,10 +82,6 @@ class FirstTabScreen extends Component {
         <Text style={{fontWeight: '500'}}>Object prop: {this.props.obj.str}</Text>
         <Text style={{fontWeight: '500'}}>Array prop: {this.props.obj.arr[0].str}</Text>
 
-        <TouchableOpacity onPress={ this.onShowViewPager }>
-          <Text style={styles.button}>ViewPager Screen</Text>
-        </TouchableOpacity>
-
         <TouchableOpacity onPress={ this.onShowPullRefreshList }>
           <Text style={styles.button}>PullRefreshList Screen</Text>
         </TouchableOpacity>
@@ -135,25 +131,7 @@ class FirstTabScreen extends Component {
       }
     });
   }
-  onShowViewPager = () => {
-    this.props.navigator.push({
-      title: "More",
-      screen: "example.ViewPagerScreen",
-      passProps: {
-        str: 'This is a prop passed in \'navigator.push()\'!',
-        obj: {
-          str: 'This is a prop passed in an object!',
-          arr: [
-            {
-              str: 'This is a prop in an object in an array in an object!'
-            }
-          ]
-        },
-        num: 1234
-      }
-    });
-  }
-
+  
   onShowPullRefreshList = () => {
     this.props.navigator.push({
       title: "Gifted ListView",

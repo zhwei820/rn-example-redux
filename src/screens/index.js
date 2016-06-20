@@ -4,7 +4,6 @@ import LoginScreen from './LoginScreen';
 import FirstTabScreen from './FirstTabScreen';
 import SecondTabScreen from './SecondTabScreen';
 import PushedScreen from './PushedScreen';
-import ViewPagerScreen from './ViewPagerScreen';
 import ModalScreen from './ModalScreen';
 import PullRefreshList from './PullRefreshList';
 
@@ -14,7 +13,6 @@ export function registerScreens(store, Provider) {
   Navigation.registerComponent('example.FirstTabScreen', () => FirstTabScreen, store, Provider);
   Navigation.registerComponent('example.SecondTabScreen', () => SecondTabScreen, store, Provider);
   Navigation.registerComponent('example.PushedScreen', () => PushedScreen, store, Provider);
-  Navigation.registerComponent('example.ViewPagerScreen', () => ViewPagerScreen, store, Provider);
   Navigation.registerComponent('example.ModalScreen', () => ModalScreen, store, Provider);
   Navigation.registerComponent('example.PullRefreshList', () => PullRefreshList, store, Provider);
 
