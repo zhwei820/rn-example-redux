@@ -273,19 +273,6 @@ class PullRefreshList extends Component {
     );
   }
 
-  /**
-   * Render a row
-   * @param {object} rowData Row data
-   */
-  // _renderSectionHeaderView = (sectionData, sectionID) => {
-  //   return (
-  //     <View style={customStyles.header}>
-  //       <Text style={customStyles.headerTitle}>
-  //         {sectionID}
-  //       </Text>
-  //     </View>
-  //   );
-  // }
 
   /**
    * Render the refreshable view when waiting for refresh
@@ -418,14 +405,21 @@ class PullRefreshList extends Component {
   _onPressBanner = (url) => {
     console.warn(url);
     this.props.navigator.pop();
-    
+
+  }
+  _renderBanner = (props) => {
+    return(
+      <View style={{flex: 1}}>
+        <Banner onPressBanner={this.props._onPressBanner}>
+        </Banner>
+      </View>
+    )
   }
 
   render() {
     return (
       <View style={screenStyles.container}>
-        <Banner onPressBanner={this._onPressBanner}>
-        </Banner>
+
         <GiftedListView
           rowView={this._renderRowView}
 
@@ -449,6 +443,9 @@ class PullRefreshList extends Component {
           emptyView={this._renderEmptyView}
 
           renderSeparator={this._renderSeparatorView}
+
+          _onPressBanner = {this._onPressBanner}
+          _renderBanner = {this._renderBanner}
 
           withSections={true} // enable sections
           sectionHeaderView={this._renderSeparatorView}

@@ -64,8 +64,9 @@ var deviceWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
     container: {
-     flex: 1,
+     flex: 0.4,
      flexDirection: 'column',
+     height: 100
    },
    viewpager: {
      flex: 1,
