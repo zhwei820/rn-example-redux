@@ -64,9 +64,8 @@ var deviceWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
     container: {
-     flex: 0.4,
+     flex: 1,
      flexDirection: 'column',
-     height: 100
    },
    viewpager: {
      flex: 1,
@@ -111,6 +110,7 @@ export default class Banner extends Component {
               renderPage={this._renderPage}
               isLoop={true}
               autoPlay={true}/>
+
         </View>
       );
     }
@@ -128,8 +128,7 @@ export default class Banner extends Component {
 
           <Image
             source={{uri: data.pic_url}}
-            style={styles.page}
-            />
+            style={styles.page} />
 
         </TouchableHighlight>
 

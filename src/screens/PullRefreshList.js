@@ -26,7 +26,6 @@ import ProductListRow from '../components/ProductListRow';
 import Banner from '../components/Banner';
 
 class PullRefreshList extends Component {
-
   static navigatorStyle = {
     statusBarColor: '#303F9F',
     toolBarColor: '#3F51B5',
@@ -409,10 +408,9 @@ class PullRefreshList extends Component {
   }
   _renderBanner = (props) => {
     return(
-      <View style={{flex: 1}}>
-        <Banner onPressBanner={this.props._onPressBanner}>
-        </Banner>
-      </View>
+      <Banner onPressBanner={this.props._onPressBanner}>
+      </Banner>
+
     )
   }
 

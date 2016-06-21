@@ -1,0 +1,16 @@
+<Banner onPressBanner={this.props._onPressBanner}>
+</Banner>
+
+
+
+renderScrollComponent={props => {
+  return (
+    <ParallaxScrollView
+        parallaxHeaderHeight={150}
+        renderForeground={() => (
+          <Banner onPressBanner={this.props._onPressBanner}>
+          </Banner>
+        )}>
+          <View></View>
+      </ParallaxScrollView>)
+}}
