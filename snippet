@@ -12,5 +12,45 @@ renderScrollComponent={props => {
           </Banner>
         )}>
           <View></View>
-      </ParallaxScrollView>)
+      </ParallaxScrollView>
+      )
 }}
+
+
+
+
+<GiftedListView
+  rowView={this._renderRowView}
+
+  onFetch={this._onFetch}
+  initialListSize={12} // the maximum number of rows displayable without scrolling (height of the listview / height of row)
+
+  firstLoader={true} // display a loader for the first fetching
+
+  pagination={true} // enable infinite scrolling using touch to load more
+  paginationFetchigView={this._renderPaginationFetchigView}
+  paginationAllLoadedView={this._renderPaginationAllLoadedView}
+  paginationWaitingView={this._renderPaginationFetchigView}
+
+  refreshable={true} // enable pull-to-refresh for iOS and touch-to-refresh for Android
+  refreshableViewHeight={50} // correct height is mandatory
+  refreshableDistance={40} // the distance to trigger the pull-to-refresh - better to have it lower than refreshableViewHeight
+  refreshableFetchingView={this._renderRefreshableFetchingView}
+  refreshableWillRefreshView={this._renderRefreshableWillRefreshView}
+  refreshableWaitingView={this._renderRefreshableWaitingView}
+
+  emptyView={this._renderEmptyView}
+
+  renderSeparator={this._renderSeparatorView}
+
+  _onPressBanner = {this._onPressBanner}
+  _renderBanner = {this._renderBanner}
+
+  withSections={true} // enable sections
+  sectionHeaderView={this._renderSeparatorView}
+
+  PullToRefreshViewAndroidProps={{
+    colors: ['#fff'],
+    progressBackgroundColor: '#003e82',
+  }}
+/>

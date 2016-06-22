@@ -22,6 +22,8 @@ import { connect } from 'react-redux';
 var GiftedListView = require('../../diy/react-native-gifted-listview/GiftedListView');
 var GiftedSpinner = require('react-native-gifted-spinner');
 
+import RefreshableListView from '../../diy/react-native-gifted-listview/test';
+
 import ProductListRow from '../components/ProductListRow';
 import Banner from '../components/Banner';
 
@@ -230,7 +232,7 @@ class PullRefreshList extends Component {
         data.push(item);
       }
     }
-    return data;
+    return tmp;
 
    }
 
@@ -271,6 +273,7 @@ class PullRefreshList extends Component {
       </ProductListRow>
     );
   }
+
 
 
   /**
@@ -413,46 +416,22 @@ class PullRefreshList extends Component {
 
     )
   }
+  _renderRow = () => {
+    return (
+      <Text>hhhhhhhhh</Text>
+    )
+  }
 
   render() {
     return (
       <View style={screenStyles.container}>
-
-        <GiftedListView
-          rowView={this._renderRowView}
-
-          onFetch={this._onFetch}
-          initialListSize={12} // the maximum number of rows displayable without scrolling (height of the listview / height of row)
-
-          firstLoader={true} // display a loader for the first fetching
-
-          pagination={true} // enable infinite scrolling using touch to load more
-          paginationFetchigView={this._renderPaginationFetchigView}
-          paginationAllLoadedView={this._renderPaginationAllLoadedView}
-          paginationWaitingView={this._renderPaginationFetchigView}
-
-          refreshable={true} // enable pull-to-refresh for iOS and touch-to-refresh for Android
-          refreshableViewHeight={50} // correct height is mandatory
-          refreshableDistance={40} // the distance to trigger the pull-to-refresh - better to have it lower than refreshableViewHeight
-          refreshableFetchingView={this._renderRefreshableFetchingView}
-          refreshableWillRefreshView={this._renderRefreshableWillRefreshView}
-          refreshableWaitingView={this._renderRefreshableWaitingView}
-
-          emptyView={this._renderEmptyView}
-
-          renderSeparator={this._renderSeparatorView}
-
-          _onPressBanner = {this._onPressBanner}
-          _renderBanner = {this._renderBanner}
-
-          withSections={true} // enable sections
-          sectionHeaderView={this._renderSeparatorView}
-
-          PullToRefreshViewAndroidProps={{
-            colors: ['#fff'],
-            progressBackgroundColor: '#003e82',
-          }}
+      <ListView
+          dataSource={this.state.dataSource}
+          renderRow={this._renderRow}
+          renderScrollComponent={props => <RecyclerViewBackedScrollView {...props} />}
+          renderSeparator={this._renderSeperator}
         />
+
       </View>
     );
   }
