@@ -22,12 +22,11 @@ import { connect } from 'react-redux';
 var GiftedListView = require('../../diy/react-native-gifted-listview/GiftedListView');
 var GiftedSpinner = require('react-native-gifted-spinner');
 
-import RefreshableListView from '../../diy/react-native-gifted-listview/test';
-
 import ProductListRow from '../components/ProductListRow';
 import Banner from '../components/Banner';
 
 class PullRefreshList extends Component {
+
   static navigatorStyle = {
     statusBarColor: '#303F9F',
     toolBarColor: '#3F51B5',
@@ -232,7 +231,7 @@ class PullRefreshList extends Component {
         data.push(item);
       }
     }
-    return tmp;
+    return data;
 
    }
 
@@ -273,7 +272,6 @@ class PullRefreshList extends Component {
       </ProductListRow>
     );
   }
-
 
 
   /**
@@ -409,33 +407,60 @@ class PullRefreshList extends Component {
     this.props.navigator.pop();
 
   }
+
+
   _renderBanner = (props) => {
     return(
       <Banner onPressBanner={this.props._onPressBanner}>
       </Banner>
+    )
+  }
 
-    )
-  }
-  _renderRow = () => {
-    return (
-      <Text>hhhhhhhhh</Text>
-    )
-  }
 
   render() {
     return (
       <View style={screenStyles.container}>
-      <ListView
-          dataSource={this.state.dataSource}
-          renderRow={this._renderRow}
-          renderScrollComponent={props => <RecyclerViewBackedScrollView {...props} />}
-          renderSeparator={this._renderSeperator}
-        />
 
+        <GiftedListView
+          rowView={this._renderRowView}
+
+          onFetch={this._onFetch}
+          initialListSize={12} // the maximum number of rows displayable without scrolling (height of the listview / height of row)
+
+          firstLoader={true} // display a loader for the first fetching
+
+          pagination={true} // enable infinite scrolling using touch to load more
+          paginationFetchigView={this._renderPaginationFetchigView}
+          paginationAllLoadedView={this._renderPaginationAllLoadedView}
+          paginationWaitingView={this._renderPaginationFetchigView}
+
+          refreshable={true} // enable pull-to-refresh for iOS and touch-to-refresh for Android
+          refreshableViewHeight={50} // correct height is mandatory
+          refreshableDistance={40} // the distance to trigger the pull-to-refresh - better to have it lower than refreshableViewHeight
+          refreshableFetchingView={this._renderRefreshableFetchingView}
+          refreshableWillRefreshView={this._renderRefreshableWillRefreshView}
+          refreshableWaitingView={this._renderRefreshableWaitingView}
+
+          emptyView={this._renderEmptyView}
+
+          renderSeparator={this._renderSeparatorView}
+
+          withSections={true} // enable sections
+          sectionHeaderView={this._renderSeparatorView}
+
+          PullToRefreshViewAndroidProps={{
+            colors: ['#fff'],
+            progressBackgroundColor: '#003e82',
+          }}
+
+          renderScrollComponent={this._renderBanner}
+
+        />
       </View>
     );
   }
 };
+
 
 
 var customStyles = {

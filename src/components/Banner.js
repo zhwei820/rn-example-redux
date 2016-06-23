@@ -13,15 +13,6 @@ import { connect } from 'react-redux';
 var ViewPager = require('react-native-viewpager');
 var deviceWidth = Dimensions.get('window').width;
 
- var IMGS = [
-   'https://images.unsplash.com/photo-1441742917377-57f78ee0e582?h=1024',
-   'https://images.unsplash.com/photo-1441716844725-09cedc13a4e7?h=1024',
-   'https://images.unsplash.com/photo-1441448770220-76743f9e6af6?h=1024',
-   'https://images.unsplash.com/photo-1441260038675-7329ab4cc264?h=1024',
-   'https://images.unsplash.com/photo-1441126270775-739547c8680c?h=1024',
-   'https://images.unsplash.com/photo-1440964829947-ca3277bd37f8?h=1024',
-   'https://images.unsplash.com/photo-1440847899694-90043f91c7f9?h=1024'
- ];
 
  let bannerData = [
     {
@@ -64,11 +55,12 @@ var deviceWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
     container: {
-     flex: 1,
      flexDirection: 'column',
+     height:150,
    },
    viewpager: {
      flex: 1,
+     height: 150,
    },
   page: {
       width: deviceWidth,
@@ -100,8 +92,10 @@ export default class Banner extends Component {
       this.state = {dataSource: dataSource.cloneWithPages(bannerData)};
     }
 
-
     render() {
+      const {
+        children,
+      } = this.props;
       return (
         <View style={styles.container} >
             <ViewPager
@@ -110,7 +104,7 @@ export default class Banner extends Component {
               renderPage={this._renderPage}
               isLoop={true}
               autoPlay={true}/>
-
+              { children }
         </View>
       );
     }
@@ -125,11 +119,9 @@ export default class Banner extends Component {
           underlayColor='#c8c7cc'
           onPress={() => this.props.onPressBanner(data)}
         >
-
           <Image
             source={{uri: data.pic_url}}
             style={styles.page} />
-
         </TouchableHighlight>
 
       );
