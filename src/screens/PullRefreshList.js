@@ -6,7 +6,8 @@ import {
   TouchableOpacity,
   Dimensions,
   Image,
-  TouchableHighlight
+  TouchableHighlight,
+  ScrollView
 } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -23,6 +24,7 @@ var GiftedListView = require('../../diy/react-native-gifted-listview/GiftedListV
 var GiftedSpinner = require('react-native-gifted-spinner');
 
 import ProductListRow from '../components/ProductListRow';
+
 import Banner from '../components/Banner';
 
 class PullRefreshList extends Component {
@@ -273,6 +275,19 @@ class PullRefreshList extends Component {
     );
   }
 
+  /**
+   * Render a row
+   * @param {object} rowData Row data
+   */
+  // _renderSectionHeaderView = (sectionData, sectionID) => {
+  //   return (
+  //     <View style={customStyles.header}>
+  //       <Text style={customStyles.headerTitle}>
+  //         {sectionID}
+  //       </Text>
+  //     </View>
+  //   );
+  // }
 
   /**
    * Render the refreshable view when waiting for refresh
@@ -402,6 +417,7 @@ class PullRefreshList extends Component {
     );
   }
 
+<<<<<<< d8dda98a9f538d361bce88689685403da1069f79
   _onPressBanner = (url) => {
     console.warn(url);
     this.props.navigator.pop();
@@ -417,10 +433,11 @@ class PullRefreshList extends Component {
   }
 
 
+=======
+>>>>>>> daea1ca00a816b8c75168eb450a51abe160c296c
   render() {
     return (
       <View style={screenStyles.container}>
-
         <GiftedListView
           rowView={this._renderRowView}
 
@@ -453,7 +470,19 @@ class PullRefreshList extends Component {
             progressBackgroundColor: '#003e82',
           }}
 
+<<<<<<< d8dda98a9f538d361bce88689685403da1069f79
           renderScrollComponent={this._renderBanner}
+=======
+          renderScrollComponent={props => {
+            const {children} = props;
+            return (
+                  <Banner onPressBanner={this.props._onPressBanner}>
+
+                  </Banner>
+                  {children}
+                )
+          }}
+>>>>>>> daea1ca00a816b8c75168eb450a51abe160c296c
 
         />
       </View>

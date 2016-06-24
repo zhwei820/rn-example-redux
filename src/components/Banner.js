@@ -93,9 +93,14 @@ export default class Banner extends Component {
     }
 
     render() {
+<<<<<<< d8dda98a9f538d361bce88689685403da1069f79
       const {
         children,
       } = this.props;
+=======
+      const {children} = this.props;
+
+>>>>>>> daea1ca00a816b8c75168eb450a51abe160c296c
       return (
         <View style={styles.container} >
             <ViewPager
