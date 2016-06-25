@@ -54,3 +54,57 @@ renderScrollComponent={props => {
     progressBackgroundColor: '#003e82',
   }}
 />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ListView
+  ref="listview"
+  dataSource={this.state.dataSource}
+  renderRow={this._renderRowView}
+  renderSeparator={this.renderSeparator}
+
+  scrollEnabled={true}
+  canCancelContentTouches={true}
+  refreshControl={
+    <RefreshControl
+      refreshing={this.state.isRefreshing}
+      onRefresh={this._onRefresh}
+      tintColor="#ff0000"
+      title="Loading..."
+      colors={['#ff0000', '#00ff00', '#0000ff']}
+      progressBackgroundColor="#ffff00"
+    />
+  }
+
+  {...this.props}
+
+  style={this.props.style}
+
+  renderScrollComponent={props => {
+    return (
+      <ParallaxScrollView
+          parallaxHeaderHeight={150}
+          renderForeground={() => (
+            <Banner onPressBanner={this._onPressBanner}>
+            </Banner>
+          )}>
+            <View></View>
+        </ParallaxScrollView>
+      )
+  }}
+
+/>

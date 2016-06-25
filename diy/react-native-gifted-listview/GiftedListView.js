@@ -28,13 +28,9 @@ function MergeRecursive(obj1, obj2) {
   return obj1;
 }
 
-<<<<<<< d8dda98a9f538d361bce88689685403da1069f79
 import ParallaxScrollView from './tmp';
 import Banner from '../../src/components/Banner';
-=======
-var GiftedSpinner = require('react-native-gifted-spinner');
 
->>>>>>> daea1ca00a816b8c75168eb450a51abe160c296c
 
 var GiftedSpinner = require('react-native-gifted-spinner');
 
@@ -339,7 +335,6 @@ var GiftedListView = React.createClass({
 
         style={this.props.style}
 
-<<<<<<< d8dda98a9f538d361bce88689685403da1069f79
         renderScrollComponent={props => {
           return (
             <ParallaxScrollView
@@ -351,8 +346,6 @@ var GiftedListView = React.createClass({
                   <View></View>
               </ParallaxScrollView>)
         }}
-=======
->>>>>>> daea1ca00a816b8c75168eb450a51abe160c296c
 
       />
     );

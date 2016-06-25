@@ -1,39 +1,77 @@
-import React, { Component, PropTypes } from 'react';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
+import React, { Component } from 'react';
 import {
+  AppRegistry,
+  ListView,
+  TouchableHighlight,
+  ScrollView,
   StyleSheet,
   Text,
   View,
-  TouchableOpacity,
-  Dimensions,
-  Image,
-  TouchableHighlight,
-  ScrollView,
-  ListView,
-  RefreshControl
+  RefreshControl,
 } from 'react-native';
-import { connect } from 'react-redux';
 
-var GiftedListView = require('../../diy/react-native-gifted-listview/GiftedListView');
-var GiftedSpinner = require('react-native-gifted-spinner');
+import Platform from 'Platform';
 
-import ProductListRow from '../components/ProductListRow';
+//回到顶部组件
+import ScrollTopView from '../../diy/react-native-scrolltotop/';
 
-import Banner from '../components/Banner';
-import ParallaxScrollView from '../../diy/react-native-gifted-listview/tmp';
+import ProductListRow from './ProductListRow';
+import Banner from './Banner';
 
 
-import RefreshList from '../components/RefreshList';
 
-class PullRefreshList extends Component {
+// small helper function which merged two objects into one
+function MergeRecursive(obj1, obj2) {
+  for (var p in obj2) {
+    try {
+      if ( obj2[p].constructor==Object ) {
+        obj1[p] = MergeRecursive(obj1[p], obj2[p]);
+      } else {
+        obj1[p] = obj2[p];
+      }
+    } catch(e) {
+      obj1[p] = obj2[p];
+    }
+  }
+  return obj1;
+}
 
-  static navigatorStyle = {
-    statusBarColor: '#303F9F',
-    toolBarColor: '#3F51B5',
-    navigationBarColor: '#303F9F',
-    tabSelectedTextColor: '#FFA000',
-    tabNormalTextColor: '#FFC107',
-    tabIndicatorColor: '#FF4081'
-  };
+
+export default class RefreshList extends Component {
+
+  _setPage(page) { this._page = page; }
+  _getPage() { return this._page; }
+  _setRows(rows) { this._rows = rows; }
+  _getRows() { return this._rows; }
+
+
+  constructor(props) {
+    super(props);
+
+    this._setPage(1);
+    this._setRows([this.getRowData()]);
+
+    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2,
+      sectionHeaderHasChanged: (section1, section2) => section1 !== section2,
+
+    });
+
+    console.log(this._getRows());
+    this.state = {
+      dataSource: ds.cloneWithRowsAndSections(this._getRows()),
+
+      isShowToTop: false,
+      isReFresh: false
+    };
+    console.log(this.state.dataSource.getRowCount());
+  }
+
 
    getRowData = () => {
     let tmp = [
@@ -226,43 +264,98 @@ class PullRefreshList extends Component {
     return data;
 
    }
+  //
+  // _onRefresh = (page = 1, callback, options) => {
+  //   this.setState({
+  //    isReFresh: true
+  //  });
+  //   setTimeout(() => {
+  //     let rows[page] = this.getRowData();
+  //     mergedRows = MergeRecursive(this._getRows(), rows);
+  //     this._updateRows(mergedRows, options);
+  //   }, 100)
+  // }
+  //
+  // _updateRows(rows = [], options = {}) {
+  //   if (rows !== null) {
+  //     this._setRows(rows);
+  //     this.setState({
+  //       dataSource: this.state.dataSource.cloneWithRowsAndSections(rows),
+  //       isReFresh: false,
+  //     });
+  //
+  //   }
+  // }
+  //
+  //
+  //
 
-  _onRefresh = (page = 1, callback, options) => {
-    setTimeout(() => {
-      let rows = this.getRowData();
 
-      const dataSource = rows.concat(this.state.dataSource);
-      this.setState({
-            loaded: this.state.loaded + 10,
-            isRefreshing: false,
-            dataSource: dataSource,
+
+
+
+    _onFetch = (page = 1, callback, options) => {
+      setTimeout(() => {
+        var rows = {};
+        rows[page] = this.getRowData();
+        if (page === 100) {
+          callback(rows, {
+            allLoaded: true, // the end of the list is reached
           });
+        } else {
+          callback(rows);
+        }
+      }, 1000); // simulating network fetching
+    }
 
-    }, 1000); // simulating network fetching
 
-  }
+    _onRefresh = (options = {}) => {
+        this.setState({
+          isReFresh: true,})
+        this._setPage(1);
+        this.onFetch(this._getPage(), this._postRefresh, options);
+    }
+
+    _postRefresh = (rows = [], options = {}) => {
+        this._updateRows(rows, options);
+    }
+
+    _onPaginate = () => {
+      if(this.state.paginationStatus==='allLoaded'){
+        return null
+      }else {
+        this.setState({
+          paginationStatus: 'fetching',
+        });
+        this.onFetch(this._getPage() + 1, this._postPaginate, {});
+      }
+    }
+
+    _postPaginate = (rows = [], options = {}) => {
+      this._setPage(this._getPage() + 1);
+      var mergedRows = null;
+      if (this.props.withSections === true) {
+        mergedRows = MergeRecursive(this._getRows(), rows);
+      } else {
+        mergedRows = this._getRows().concat(rows);
+      }
+
+      this._updateRows(mergedRows, options);
+    }
+
+    _updateRows = (rows = [], options = {}) => {
+      this._setRows(rows);
+        this.setState({
+          dataSource: this.state.dataSource.cloneWithRowsAndSections(rows),
+          isReFresh: false,
+          paginationStatus: (options.allLoaded === true ? 'allLoaded' : 'waiting'),
+        });
+
+    }
 
 
-  /**
-   * When a row is touched
-   * @param {object} rowData Row data
-   */
-  _onPress = (rowData) => {
-    this.props.navigator.pop();
-  }
-
-  _onPressBanner = (url) => {
-    this.props.navigator.pop();
-
-  }
-
-  /**
-   * Render a row
-   * @param {object} rowData Row data
-   */
   _renderRowView = (rowData) => {
     return (
-
       <ProductListRow
         rowData={rowData}
         onPress={this._onPress}
@@ -271,101 +364,91 @@ class PullRefreshList extends Component {
     );
   }
 
-  constructor(props){
-    super(props);
-    let ds = new ListView.DataSource({
-      rowHasChanged: (row1, row2) => row1 !== row2,
-    });
-    this.state = {dataSource: ds.cloneWithRows(this.getRowData())};
-
-  }
-
-  /**
-   * Render a separator between rows
-   */
-  _renderSeparatorView = () => {
+  _listView() {
+    /*
+     * android，ios都使用原生下拉刷新组件：
+     */
     return (
-      <View style={customStyles.separator} />
+      <ListView
+        style={styles.listview}
+        dataSource={this.state.dataSource}
+        renderRow={this._renderRowView}
+        onEndReachedThreshold = {10}
+        ref="listview"
+        onScroll={(e)=>this._onScroll(e)}
+        style={styles.listView}
+
+        renderScrollComponent={props => {
+          return (
+                <Banner onPressBanner={this.props._onPressBanner} {...props}>
+                </Banner>
+              )
+        }}
+
+        refreshControl={
+            <RefreshControl
+                refreshing={this.state.isReFresh}
+                onRefresh={this._onRefresh}
+                colors={['#ffffff', '#ffffff', '#ffffff']}
+                progressBackgroundColor="#099fde"/>
+        }/>
     );
   }
 
   render() {
+    let listView = this._listView();
     return (
-      <RefreshList></RefreshList>
+      <View style={{flex:1}}>
+
+        {listView}
+        {this.state.isShowToTop?<ScrollTopView root={this} ></ScrollTopView>:null}
+      </View>
     );
   }
 
-};
+  _onScroll(e) {
+    var offsetY = e.nativeEvent.contentOffset.y;
 
-
-
-var customStyles = {
-  separator: {
-    height: 1,
-    backgroundColor: 'transparent'
-  },
-  refreshableView: {
-    height: 50,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  actionsLabel: {
-    fontSize: 20,
-    color: '#007aff',
-  },
-  paginationView: {
-    height: 44,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFF',
-  },
-  defaultView: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-  },
-  defaultViewTitle: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    marginBottom: 15,
-  },
-  row: {
-    padding: 10,
-    height: 44,
-  },
-  header: {
-    backgroundColor: '#50a4ff',
-    padding: 10,
-  },
-  headerTitle: {
-    color: '#fff',
-  },
-};
-
-var screenStyles = {
-  container: {
-    flex: 1,
-    backgroundColor: '#FFF',
-  },
-  navBar: {
-    height: 64,
-    backgroundColor: '#007aff',
-
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  navBarTitle: {
-    color: '#fff',
-    fontSize: 16,
-    marginTop: 12,
+    if(offsetY > 100) {
+        this.setState({
+            isShowToTop: true
+        })
+    } else {
+        this.setState({
+            isShowToTop: false
+        })
+    }
   }
-};
 
-function mapStateToProps(state) {
-  return {
-    counter: state.counter
-  };
+  rowRender(data) {
+    return (
+      <View style={styles.container}>
+        <Text>{data}</Text>
+      </View>
+    );
+  }
+
+
 }
 
-export default connect(mapStateToProps)(PullRefreshList);
+const styles = StyleSheet.create({
+  header: {
+    height : 50,
+    paddingTop:15,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor : '#099fde'
+  },
+  headerText: {
+    color: '#ffffff'
+  },
+  container: {
+    flex: 1,
+    height:74,
+    marginTop: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent:'center',
+    backgroundColor: '#cccccc',
+  }
+});
