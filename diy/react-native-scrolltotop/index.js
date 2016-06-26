@@ -22,30 +22,30 @@ export default class ScrollToTop extends Component {
         let config = this.props;
 
         return (
-            <TouchableOpacity 
-                onPress={this._onPress.bind(this)} 
+            <TouchableOpacity
+                onPress={this._onPress.bind(this)}
                 style={[styles.toTop, {
                     borderRadius: config.isRadius? config.bdRadius : 0,
-                    backgroundColor: config.bgColor?config.bgColor:config.text?'#099fde':null, 
-                    width: config.width, 
+                    backgroundColor: config.bgColor?config.bgColor:config.text?'#099fde':null,
+                    width: config.width,
                     height: config.height,
                     left: config.left,
                     top: config.top
                 }]}>
                 {config.text?
-                    <Text 
+                    <Text
                         style={{
-                            color: config.color, 
+                            color: config.color,
                             fontSize: config.fontSize
                         }}>
                         {config.text}
                     </Text>
                     :
-                    <Image 
+                    <Image
                         style={{
-                            width: config.width, 
+                            width: config.width,
                             height: config.height
-                        }} 
+                        }}
                         source={{
                             uri: config.imageUri
                         }} />
@@ -58,7 +58,7 @@ export default class ScrollToTop extends Component {
         /*
          * android，ios都使用原生下拉刷新组件：
          */
-        this.props.root.refs.listview.scrollTo({x:0, y:0, animated:true});
+        this.props.root.refs.listview._scrollComponent.refs.scrollview.scrollTo({x:0, y:0, animated:true});  // 需要對不同的組件進行處理
     }
 }
 
@@ -67,7 +67,7 @@ ScrollToTop.defaultProps = {
     width: 60,
     height: 60,
     left: Dimensions.get('window').width - 80,
-    top: Dimensions.get('window').height - 160,
+    top: Dimensions.get('window').height - 260,
     bdRadius: 30,
     color: '#ffffff',
     fontSize: 12,

@@ -97,7 +97,7 @@ export default class Banner extends Component {
       const {children} = this.props;
 
       return (
-        <ScrollView style={styles.container} {...this.props}>
+        <ScrollView style={styles.container} {...this.props} ref="scrollview">
             <ViewPager
               style={styles.viewpager}
               dataSource={this.state.dataSource}
@@ -110,9 +110,9 @@ export default class Banner extends Component {
     }
 
 
-    _renderPage(
+    _renderPage = (
       data: Object,
-      pageID: number | string,) {
+      pageID: number | string,) => {
       return (
         <TouchableHighlight
           style={styles.page}

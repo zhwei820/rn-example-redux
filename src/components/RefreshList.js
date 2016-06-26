@@ -24,6 +24,7 @@ import ScrollTopView from '../../diy/react-native-scrolltotop/';
 import ProductListRow from './ProductListRow';
 import Banner from './Banner';
 
+var GiftedSpinner = require('react-native-gifted-spinner');
 
 
 // small helper function which merged two objects into one
@@ -62,12 +63,12 @@ export default class RefreshList extends Component {
 
     });
 
-    console.log(this._getRows());
     this.state = {
       dataSource: ds.cloneWithRowsAndSections(this._getRows()),
 
       isShowToTop: false,
-      isReFresh: false
+      isReFresh: false,
+      paginationStatus: 'waiting'
     };
     console.log(this.state.dataSource.getRowCount());
   }
@@ -313,7 +314,8 @@ export default class RefreshList extends Component {
         this.setState({
           isReFresh: true,})
         this._setPage(1);
-        this.onFetch(this._getPage(), this._postRefresh, options);
+        console.log(this._getPage());
+        this._onFetch(this._getPage(), this._postRefresh, options);
     }
 
     _postRefresh = (rows = [], options = {}) => {
@@ -327,19 +329,14 @@ export default class RefreshList extends Component {
         this.setState({
           paginationStatus: 'fetching',
         });
-        this.onFetch(this._getPage() + 1, this._postPaginate, {});
+        this._onFetch(this._getPage() + 1, this._postPaginate, {});
       }
     }
 
     _postPaginate = (rows = [], options = {}) => {
       this._setPage(this._getPage() + 1);
       var mergedRows = null;
-      if (this.props.withSections === true) {
-        mergedRows = MergeRecursive(this._getRows(), rows);
-      } else {
-        mergedRows = this._getRows().concat(rows);
-      }
-
+      mergedRows = MergeRecursive(this._getRows(), rows);
       this._updateRows(mergedRows, options);
     }
 
@@ -353,18 +350,79 @@ export default class RefreshList extends Component {
 
     }
 
+    paginationFetchingView = () => {
+
+      return (
+        <View style={[this.defaultStyles.paginationView]}>
+          <GiftedSpinner />
+        </View>
+      );
+    }
+    paginationAllLoadedView = () => {
+
+      return (
+        <View style={[this.defaultStyles.paginationView]}>
+          <Text style={[this.defaultStyles.actionsLabel]}>
+            ~
+          </Text>
+        </View>
+      );
+    }
+    paginationWaitingView = () => {
+
+      return (
+        <View style={[this.defaultStyles.paginationView]}>
+          <Text style={[this.defaultStyles.actionsLabel]}>
+            上拉加载更多
+          </Text>
+        </View>
+      );
+    }
+    emptyView = (refreshCallback) => {
+
+      return (
+        <View style={[this.defaultStyles.defaultView]}>
+          <Text style={[this.defaultStyles.defaultViewTitle]}>
+            Sorry, there is no content to display
+          </Text>
+
+          <TouchableHighlight
+            underlayColor='#c8c7cc'
+            onPress={refreshCallback}
+          >
+            <Text>
+              ↻
+            </Text>
+          </TouchableHighlight>
+        </View>
+      );
+    }
+
+  _renderPaginationView = () => {
+    if ((this.state.paginationStatus === 'fetching')) {
+      return this.paginationFetchingView();
+    } else if (this.state.paginationStatus === 'allLoaded') {
+      return this.paginationAllLoadedView();
+    } else if (this.state.paginationStatus === 'waiting') {
+      return this.paginationWaitingView();
+    } else if (this._getRows().length === 0) {
+      return this.emptyView(this._onRefresh);
+    } else {
+      return null;
+    }
+  }
 
   _renderRowView = (rowData) => {
     return (
       <ProductListRow
         rowData={rowData}
-        onPress={this._onPress}
+        onPress={this.props.onPress}
       >
       </ProductListRow>
     );
   }
 
-  _listView() {
+  _listView = () => {
     /*
      * android，ios都使用原生下拉刷新组件：
      */
@@ -373,14 +431,15 @@ export default class RefreshList extends Component {
         style={styles.listview}
         dataSource={this.state.dataSource}
         renderRow={this._renderRowView}
+        renderFooter={this._renderPaginationView}
         onEndReachedThreshold = {10}
         ref="listview"
         onScroll={(e)=>this._onScroll(e)}
-        style={styles.listView}
+        onEndReached={this._onPaginate}
 
         renderScrollComponent={props => {
           return (
-                <Banner onPressBanner={this.props._onPressBanner} {...props}>
+                <Banner onPressBanner={this.props.onPressBanner} {...props} >
                 </Banner>
               )
         }}
@@ -390,7 +449,7 @@ export default class RefreshList extends Component {
                 refreshing={this.state.isReFresh}
                 onRefresh={this._onRefresh}
                 colors={['#ffffff', '#ffffff', '#ffffff']}
-                progressBackgroundColor="#099fde"/>
+                progressBackgroundColor="#0000E3"/>
         }/>
     );
   }
@@ -401,7 +460,7 @@ export default class RefreshList extends Component {
       <View style={{flex:1}}>
 
         {listView}
-        {this.state.isShowToTop?<ScrollTopView root={this} ></ScrollTopView>:null}
+        {this.state.isShowToTop ? <ScrollTopView root={this} ></ScrollTopView>:null}
       </View>
     );
   }
@@ -428,6 +487,31 @@ export default class RefreshList extends Component {
     );
   }
 
+  defaultStyles = {
+    separator: {
+      height: 1,
+      backgroundColor: '#CCC'
+    },
+    actionsLabel: {
+      fontSize: 10,
+    },
+    paginationView: {
+      height: 44,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#FFFFFF',
+    },
+    defaultView: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: 20,
+    },
+    defaultViewTitle: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      marginBottom: 15,
+    },
+  }
 
 }
 
@@ -437,7 +521,7 @@ const styles = StyleSheet.create({
     paddingTop:15,
     justifyContent:'center',
     alignItems:'center',
-    backgroundColor : '#099fde'
+    backgroundColor : '#FFFFFF'
   },
   headerText: {
     color: '#ffffff'
@@ -450,5 +534,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent:'center',
     backgroundColor: '#cccccc',
+  },
+  listview: {
+    backgroundColor : '#FFFFFF'
+
   }
 });
