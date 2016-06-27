@@ -93,6 +93,11 @@ export default class Banner extends Component {
       this.state = {dataSource: dataSource.cloneWithPages(bannerData)};
     }
 
+    onIncrementPress = () => {
+      this.props.setOrderTab1();
+    }
+
+
     render() {
       const {children} = this.props;
 
@@ -117,7 +122,7 @@ export default class Banner extends Component {
         <TouchableHighlight
           style={styles.page}
           underlayColor='#c8c7cc'
-          onPress={() => this.props.onPressBanner(data)}
+          onPress={() => this.onIncrementPress()}
         >
           <Image
             source={{uri: data.pic_url}}

@@ -1,0 +1,17 @@
+{
+  "name": "Groceries",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/react-native/packager/packager.sh"
+  },
+  "dependencies": {
+    "firebase": "2.4.2",
+    "react": "^15.1.0",
+    "react-native": "^0.28.0",
+    "react-native-simple-store": "^1.0.1",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0"
+  }
+}

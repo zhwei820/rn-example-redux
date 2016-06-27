@@ -35,6 +35,13 @@ class PullRefreshList extends Component {
     tabIndicatorColor: '#FF4081'
   };
 
+
+  render() {
+    return (
+      <RefreshList onPress={this._onPress} onPressBanner={this._onPressBanner} {...this.props}></RefreshList>
+    );
+  }
+
   _onPress = (rowData) => {
     this.props.navigator.pop();
   }
@@ -42,12 +49,6 @@ class PullRefreshList extends Component {
   _onPressBanner = (url) => {
     this.props.navigator.pop();
     this.onIncrementPress();
-  }
-
-  render() {
-    return (
-      <RefreshList onPress={this._onPress} onPressBanner={this._onPressBanner} {...this.props}></RefreshList>
-    );
   }
 
 
