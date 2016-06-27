@@ -1,3 +1,5 @@
+import { bindActionCreators } from 'redux'
+
 import React, { Component, PropTypes } from 'react';
 import {
   StyleSheet,
@@ -12,6 +14,7 @@ import {
   RefreshControl
 } from 'react-native';
 import { connect } from 'react-redux';
+import * as screensrActions from '../reducers/screens/actions';
 
 var GiftedSpinner = require('react-native-gifted-spinner');
 
@@ -38,18 +41,21 @@ class PullRefreshList extends Component {
 
   _onPressBanner = (url) => {
     this.props.navigator.pop();
-
+    this.onIncrementPress();
   }
 
   render() {
     return (
-      <RefreshList onPress={this._onPress} onPressBanner={this._onPressBanner}></RefreshList>
+      <RefreshList onPress={this._onPress} onPressBanner={this._onPressBanner} {...this.props}></RefreshList>
     );
   }
 
+
+  onIncrementPress = () => {
+    this.props.setOrderTab1();
+  }
+
 };
-
-
 
 var customStyles = {
   separator: {
@@ -116,8 +122,13 @@ var screenStyles = {
 
 function mapStateToProps(state) {
   return {
-    counter: state.counter
+    screens: state.screens
   };
 }
 
-export default connect(mapStateToProps)(PullRefreshList);
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(screensrActions, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PullRefreshList)

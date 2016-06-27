@@ -131,7 +131,7 @@ class FirstTabScreen extends Component {
       }
     });
   }
-  
+
   onShowPullRefreshList = () => {
     this.props.navigator.push({
       title: "Gifted ListView",
