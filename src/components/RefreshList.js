@@ -439,7 +439,7 @@ export default class RefreshList extends Component {
 
         renderScrollComponent={props => {
           return (
-                <Banner onPressBanner={this.props.onPressBanner} {...props} >
+                <Banner onPressBanner={this.props.onPressBanner} {...this.props} >
                 </Banner>
               )
         }}
