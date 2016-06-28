@@ -24,6 +24,10 @@ import ScrollTopView from '../../diy/react-native-scrolltotop/';
 import ProductListRow from './ProductListRow';
 import Banner from './Banner';
 var GiftedSpinner = require('react-native-gifted-spinner');
+var store = require('react-native-simple-store');
+
+import {APIS, OPTIONS} from '../constant/globals'
+import {userInfo} from '../helper/storage'
 
 var STORAGE_KEY = '@AsyncStorageExample:key';
 
@@ -43,14 +47,16 @@ function MergeRecursive(obj1, obj2) {
   return obj1;
 }
 
-
 export default class RefreshList extends Component {
+
+  getUrl = (Type) => {
+    return OPTIONS.API_URL + APIS[Type] + '&last_round_id=0';
+  }
 
   async getRowData() {
     try {
-      let response = await fetch('http://api.duo17.com/list_pro_common.do?uid=44248888&app_version=1.9.4.2&os_type=android&channel=share&last_round_id=0');
+      let response = await fetch(this.getUrl());
       let responseJson = await response.json();
-      console.log('responseJsonresponseJsonresponseJsonresponseJsonresponseJsonresponseJsonresponseJson');
 
       let data = [];
       let item = [];
@@ -67,10 +73,6 @@ export default class RefreshList extends Component {
           data.push(item);
         }
       }
-      console.log('datadatadatadatadatadatadata');
-
-      console.log(data);
-
       return data;
     } catch(error) {
       // Handle error
@@ -83,55 +85,51 @@ export default class RefreshList extends Component {
   _setRows(rows) { this._rows = rows; }
   _getRows() { return this._rows; }
 
-  async _loadInitialState() {
+  async _loadInitialState() {  // 第一个分页
       try {
         let firstSection = await this.getRowData();
-
         this._setRows([firstSection]);
         this._setPage(1);
-        console.log(this._getRows());
 
         var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2,
           sectionHeaderHasChanged: (section1, section2) => section1 !== section2,
         });
 
-        this.state = {
-          dataSource: ds.cloneWithRowsAndSections(this._getRows()),
-          isShowToTop: false,
-          isReFresh: false,
-          paginationStatus: 'waiting'
-        };
+        this.setState({dataSource: ds.cloneWithRowsAndSections(this._getRows())});
 
-        var value = await AsyncStorage.getItem(STORAGE_KEY);
-        if (value !== null){
-          // this.setState({selectedValue: value});
-        } else {
-          console.warn("error");
-        }
+        store.save(STORAGE_KEY, firstSection)
       } catch (error) {
         console.warn("exception");
-
       }
     }
   componentWillMount() {
       this._loadInitialState().done();
       console.log("_loadInitialState done");
-  }
+    }
 
   constructor(props) {
     super(props);
 
-    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2,
+    this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2,
       sectionHeaderHasChanged: (section1, section2) => section1 !== section2,
     });
 
+    store
+      .get(STORAGE_KEY)
+      .then(firstSection => {
+        if (firstSection !== null){
+          this.setState({dataSource: this.ds.cloneWithRowsAndSections([firstSection])});
+        } else {
+          console.warn("error");
+        }
+      })
+
     this.state = {
-      dataSource: ds.cloneWithRowsAndSections([]),
+      dataSource: this.ds.cloneWithRowsAndSections([]),
       isShowToTop: false,
       isReFresh: false,
       paginationStatus: 'waiting'
     };
-
   }
 
   async _onFetch(page = 1, callback, options){
@@ -275,7 +273,7 @@ export default class RefreshList extends Component {
 
         renderScrollComponent={props => {
           return (
-                <Banner onPressBanner={this.props.onPressBanner} {...this.props} >
+                <Banner onPressBanner={this.props.onPressBanner} {...this.props} {...props} >
                 </Banner>
               )
         }}
