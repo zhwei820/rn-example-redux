@@ -27,7 +27,7 @@ var GiftedSpinner = require('react-native-gifted-spinner');
 var store = require('react-native-simple-store');
 
 import {APIS, OPTIONS} from '../constant/globals'
-import {userInfo} from '../helper/storage'
+import {queryUserInfo} from '../helper/storage'
 
 var STORAGE_KEY = '@AsyncStorageExample:key';
 
@@ -50,12 +50,12 @@ function MergeRecursive(obj1, obj2) {
 export default class RefreshList extends Component {
 
   getUrl = (Type) => {
-    return OPTIONS.API_URL + APIS[Type] + '&last_round_id=0';
+    return OPTIONS.API_URL + APIS[Type] + queryUserInfo + '&last_round_id=0';
   }
 
   async getRowData() {
     try {
-      let response = await fetch(this.getUrl());
+      let response = await fetch(this.getUrl('list_pro_common'));
       let responseJson = await response.json();
 
       let data = [];
@@ -102,9 +102,8 @@ export default class RefreshList extends Component {
         console.warn("exception");
       }
     }
-  componentWillMount() {
+  componentDidMount() {
       this._loadInitialState().done();
-      console.log("_loadInitialState done");
     }
 
   constructor(props) {
@@ -114,8 +113,7 @@ export default class RefreshList extends Component {
       sectionHeaderHasChanged: (section1, section2) => section1 !== section2,
     });
 
-    store
-      .get(STORAGE_KEY)
+    store.get(STORAGE_KEY)
       .then(firstSection => {
         if (firstSection !== null){
           this.setState({dataSource: this.ds.cloneWithRowsAndSections([firstSection])});
