@@ -19,6 +19,7 @@
     "react-native-navigation": "../",
     "react-native-parallax-scroll-view": "^0.19.0",
     "react-native-progress": "^3.0.0",
+    "react-native-simple-store": "^1.0.1",
     "react-native-viewpager": "^0.2.9",
     "react-redux": "^4.0.6",
     "redux": "^3.0.5",

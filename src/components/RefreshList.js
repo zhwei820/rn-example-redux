@@ -49,18 +49,34 @@ function MergeRecursive(obj1, obj2) {
 
 export default class RefreshList extends Component {
 
-  getUrl = (Type) => {
-    return OPTIONS.API_URL + APIS[Type] + queryUserInfo + '&last_round_id=0';
+  getUrl = (Para) => {
+    let url = OPTIONS.API_URL + APIS[Para[0]] + queryUserInfo + '&last_round_id=' + (Para[1] ? Para[1] : 0) + '&last_weight=' + (Para[2] ? Para[2] : 0);
+    console.log(url);
+    return url;
   }
 
-  async getRowData() {
+  async getRowData(last_round_id = 0, last_weight = 0) {
     try {
-      let response = await fetch(this.getUrl('list_pro_common'));
+      console.log('getRowData');
+      console.log(last_round_id);
+      console.log(last_weight);
+      let response = await fetch(this.getUrl(['list_pro_common', last_round_id, last_weight]));
       let responseJson = await response.json();
 
       let data = [];
       let item = [];
+      let _last_round_id = 10000000;
+      let _last_weight = 10000000;
+      if(!responseJson.data){
+        return [];
+      }
       for (var i = 0; i < responseJson.data.length; i++) {
+        if(_last_round_id > responseJson.data[i].roundId){
+          _last_round_id = responseJson.data[i].roundId;
+        }
+        if(_last_weight > responseJson.data[i].weight){
+          _last_weight = responseJson.data[i].weight;
+        }
         if(i % 2 == 0 && i != responseJson.data.length - 1){
           item.push(responseJson.data[i]);
         }else if(i % 2 != 0) {
@@ -73,12 +89,23 @@ export default class RefreshList extends Component {
           data.push(item);
         }
       }
+      console.log(_last_round_id);
+
+      this._setLastRoundId(_last_round_id);
+      console.log(this._getLastRoundId());
+      this._setLastWeight(_last_weight);
       return data;
     } catch(error) {
       // Handle error
       console.warn(error);
     }
   }
+
+  _setLastWeight(last_weight) { this._last_weight = last_weight; }
+  _getLastWeight() { return this._last_weight; }
+
+  _setLastRoundId(last_round_id) { this._last_round_id = last_round_id; }
+  _getLastRoundId() { return this._last_round_id; }
 
   _setPage(page) { this._page = page; }
   _getPage() { return this._page; }
@@ -87,16 +114,17 @@ export default class RefreshList extends Component {
 
   async _loadInitialState() {  // 第一个分页
       try {
+        this._setLastRoundId(0);
+        this._setLastWeight(0);
+        this._setPage(1);
         let firstSection = await this.getRowData();
         this._setRows([firstSection]);
-        this._setPage(1);
 
         var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2,
           sectionHeaderHasChanged: (section1, section2) => section1 !== section2,
         });
 
         this.setState({dataSource: ds.cloneWithRowsAndSections(this._getRows())});
-
         store.save(STORAGE_KEY, firstSection)
       } catch (error) {
         console.warn("exception");
@@ -132,7 +160,7 @@ export default class RefreshList extends Component {
 
   async _onFetch(page = 1, callback, options){
       var rows = {};
-      rows[page] = await this.getRowData();
+      rows[page] = await this.getRowData(this._getLastRoundId(), this._getLastWeight());
       if (page === 100) {
         callback(rows, {
           allLoaded: true, // the end of the list is reached
@@ -145,8 +173,9 @@ export default class RefreshList extends Component {
     _onRefresh = (options = {}) => {
         this.setState({
           isReFresh: true,})
+        this._setLastRoundId(0);
+        this._setLastWeight(0);
         this._setPage(1);
-        console.log(this._getPage());
         this._onFetch(this._getPage(), this._postRefresh, options);
     }
 
