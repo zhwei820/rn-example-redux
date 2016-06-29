@@ -42,16 +42,8 @@ class PullRefreshList extends Component {
 
     let listView = this.getListView();
     return (
-      <View style={{flex: 1, padding: 20}}>
-
-
-        <RnImage source={{ uri: 'http://pointcadres.fr/img/Cadre%20image-paysage-Plage-cocotier-40X120cm.jpg' }}
-          style={{
-            width: 320,
-            height: 240,
-          }}
-        />
-
+      <View style={{flex:1}}>
+        {listView}
       </View>
 
     )

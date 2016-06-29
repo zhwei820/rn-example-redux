@@ -8,7 +8,6 @@ import {
 
 var RNIMAGE = 'RNIMAGE';
 export default class RnImage extends Component {
-
   setNativeProps(props: Object) {
    this.refs[RNIMAGE].setNativeProps(props);
  }

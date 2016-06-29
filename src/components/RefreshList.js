@@ -18,13 +18,13 @@ import {
 } from 'react-native';
 
 import Platform from 'Platform';
+var GiftedSpinner = require('react-native-gifted-spinner');
+var store = require('react-native-simple-store');
 
 //回到顶部组件
 import ScrollTopView from '../../diy/react-native-scrolltotop/';
 import ProductListRow from './ProductListRow';
 import Banner from './Banner';
-var GiftedSpinner = require('react-native-gifted-spinner');
-var store = require('react-native-simple-store');
 
 import {APIS, OPTIONS} from '../constant/globals'
 import {queryUserInfo} from '../helper/storage'
@@ -52,7 +52,6 @@ function MergeRecursive(obj1, obj2) {
 export default class RefreshList extends Component {
 
   getUrl = (Para) => {
-
     let queryExtra = '&last_round_id=' + (Para[1] ? Para[1] : 0) + '&last_weight=' + (Para[2] ? Para[2] : 0);
     let url = '';
     url = OPTIONS.API_URL + APIS[Para[0]] + queryUserInfo + queryExtra;
@@ -67,7 +66,6 @@ export default class RefreshList extends Component {
   async getRowData(last_round_id = 0, last_weight = 0) {
     try {
       let response = await fetch(this.getUrl(['list_pro_common', last_round_id, last_weight]));
-
       let responseJson = await response.json();
 
       let data = [];
@@ -219,7 +217,6 @@ export default class RefreshList extends Component {
     }
 
     paginationFetchingView = () => {
-
       return (
         <View style={[this.defaultStyles.paginationView]}>
           <GiftedSpinner />
@@ -227,7 +224,6 @@ export default class RefreshList extends Component {
       );
     }
     paginationAllLoadedView = () => {
-
       return (
         <View style={[this.defaultStyles.paginationView]}>
           <Text style={[this.defaultStyles.actionsLabel]}>
@@ -237,7 +233,6 @@ export default class RefreshList extends Component {
       );
     }
     paginationWaitingView = () => {
-
       return (
         <View style={[this.defaultStyles.paginationView]}>
           <Text style={[this.defaultStyles.actionsLabel]}>
@@ -247,7 +242,6 @@ export default class RefreshList extends Component {
       );
     }
     emptyView = (refreshCallback) => {
-
       return (
         <View style={[this.defaultStyles.defaultView]}>
           <Text style={[this.defaultStyles.defaultViewTitle]}>
@@ -311,7 +305,6 @@ export default class RefreshList extends Component {
                 </Banner>
               )
         }}
-
         refreshControl={
             <RefreshControl
                 refreshing={this.state.isReFresh}
@@ -334,7 +327,6 @@ export default class RefreshList extends Component {
 
   _onScroll(e) {
     var offsetY = e.nativeEvent.contentOffset.y;
-
     if(offsetY > 100) {
         this.setState({
             isShowToTop: true
