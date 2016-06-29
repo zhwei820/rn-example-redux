@@ -25,6 +25,8 @@ import Banner from '../components/Banner';
 import RefreshList from '../components/RefreshList';
 import RnImage from '../../diy/RnImage';
 
+var PULLREFRESH = 'PULLREFRESH';
+
 class PullRefreshList extends Component {
 
   static navigatorStyle = {
@@ -36,16 +38,19 @@ class PullRefreshList extends Component {
     tabIndicatorColor: '#FF4081'
   };
 
+  setNativeProps(props: Object) {
+   this.refs[PULLREFRESH].setNativeProps(props);
+ }
 
   render() {
-    console.warn('pull Refresh constructor');
-
-    let listView = this.getListView();
+    if(!this.listView){
+      console.warn('pull Refresh constructor');
+      this.listView = this.getListView();
+    }
     return (
-      <View style={{flex:1}}>
-        {listView}
+      <View style={{flex:1}} ref={PULLREFRESH}>
+        {this.listView}
       </View>
-
     )
   }
 

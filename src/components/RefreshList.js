@@ -50,7 +50,6 @@ function MergeRecursive(obj1, obj2) {
 }
 
 export default class RefreshList extends Component {
-
   getUrl = (Para) => {
     let queryExtra = '&last_round_id=' + (Para[1] ? Para[1] : 0) + '&last_weight=' + (Para[2] ? Para[2] : 0);
     let url = '';
@@ -213,7 +212,6 @@ export default class RefreshList extends Component {
           isReFresh: false,
           paginationStatus: (options.allLoaded === true ? 'allLoaded' : 'waiting'),
         });
-
     }
 
     paginationFetchingView = () => {
@@ -285,9 +283,6 @@ export default class RefreshList extends Component {
   }
 
   _listView = () => {
-    /*
-     * android，ios都使用原生下拉刷新组件：
-     */
     return (
       <ListView
         style={styles.listview}
