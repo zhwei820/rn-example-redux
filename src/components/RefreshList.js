@@ -33,15 +33,17 @@ var STORAGE_KEY = '@AsyncStorageExample:key';
 
 // small helper function which merged two objects into one
 function MergeRecursive(obj1, obj2) {
-  for (var p in obj2) {
-    try {
-      if ( obj2[p].constructor==Object ) {
-        obj1[p] = MergeRecursive(obj1[p], obj2[p]);
-      } else {
+  if(obj2){
+    for (var p in obj2) {
+      try {
+        if ( obj2[p].constructor==Object ) {
+          obj1[p] = MergeRecursive(obj1[p], obj2[p]);
+        } else {
+          obj1[p] = obj2[p];
+        }
+      } catch(e) {
         obj1[p] = obj2[p];
       }
-    } catch(e) {
-      obj1[p] = obj2[p];
     }
   }
   return obj1;
@@ -57,9 +59,6 @@ export default class RefreshList extends Component {
 
   async getRowData(last_round_id = 0, last_weight = 0) {
     try {
-      console.log('getRowData');
-      console.log(last_round_id);
-      console.log(last_weight);
       let response = await fetch(this.getUrl(['list_pro_common', last_round_id, last_weight]));
       let responseJson = await response.json();
 
@@ -89,10 +88,7 @@ export default class RefreshList extends Component {
           data.push(item);
         }
       }
-      console.log(_last_round_id);
-
       this._setLastRoundId(_last_round_id);
-      console.log(this._getLastRoundId());
       this._setLastWeight(_last_weight);
       return data;
     } catch(error) {
@@ -120,35 +116,36 @@ export default class RefreshList extends Component {
         let firstSection = await this.getRowData();
         this._setRows([firstSection]);
 
-        var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2,
-          sectionHeaderHasChanged: (section1, section2) => section1 !== section2,
-        });
-
-        this.setState({dataSource: ds.cloneWithRowsAndSections(this._getRows())});
+        this.setState({dataSource: this.ds.cloneWithRowsAndSections(this._getRows())});
         store.save(STORAGE_KEY, firstSection)
       } catch (error) {
         console.warn("exception");
       }
     }
-  componentDidMount() {
-      this._loadInitialState().done();
+  async _loadInitialStateFromCache(){
+     let firstSection = await store.get(STORAGE_KEY);
+
+      // .then(firstSection => {
+      //   if (firstSection !== null){
+      //     this.setState({dataSource: this.ds.cloneWithRowsAndSections([firstSection])});
+      //   } else {
+      //     console.warn("error");
+      //   }
+      // })
+  }
+  componentWillMount() {
+      // this._loadInitialState().done();
     }
 
   constructor(props) {
     super(props);
+    this._setLastRoundId(0);
+    this._setLastWeight(0);
+    this._setPage(1);
 
     this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2,
       sectionHeaderHasChanged: (section1, section2) => section1 !== section2,
     });
-
-    store.get(STORAGE_KEY)
-      .then(firstSection => {
-        if (firstSection !== null){
-          this.setState({dataSource: this.ds.cloneWithRowsAndSections([firstSection])});
-        } else {
-          console.warn("error");
-        }
-      })
 
     this.state = {
       dataSource: this.ds.cloneWithRowsAndSections([]),
@@ -300,7 +297,7 @@ export default class RefreshList extends Component {
 
         renderScrollComponent={props => {
           return (
-                <Banner onPressBanner={this.props.onPressBanner} {...this.props} {...props} >
+                <Banner {...this.props} {...props} >
                 </Banner>
               )
         }}

@@ -38,22 +38,36 @@ class PullRefreshList extends Component {
 
   render() {
     return (
-      <RefreshList onPress={this._onPress} onPressBanner={this._onPressBanner} {...this.props}></RefreshList>
+      <RefreshList onPress={this._onPress} {...this.props}></RefreshList>
     );
   }
 
   _onPress = (rowData) => {
-    this.props.navigator.pop();
+    // this.props.navigator.pop();
+    this.onPushPress();
   }
-
-  _onPressBanner = (url) => {
-    this.props.navigator.pop();
-    this.onIncrementPress();
-  }
-
 
   onIncrementPress = () => {
     this.props.setOrderTab1();
+  }
+
+  onPushPress = () => {
+    this.props.navigator.push({
+      title: "More",
+      screen: "example.PushedScreen",
+      passProps: {
+        str: 'This is a prop passed in \'navigator.push()\'!',
+        obj: {
+          str: 'This is a prop passed in an object!',
+          arr: [
+            {
+              str: 'This is a prop in an object in an array in an object!'
+            }
+          ]
+        },
+        num: 1234
+      }
+    });
   }
 
 };

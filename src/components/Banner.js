@@ -14,6 +14,7 @@ import { connect } from 'react-redux';
 var ViewPager = require('react-native-viewpager');
 var deviceWidth = Dimensions.get('window').width;
 
+import RnImage from '../../diy/RnImage';
 
  let bannerData = [
     {
@@ -80,10 +81,6 @@ export default class Banner extends Component {
     tabIndicatorColor: '#FF4081'
   };
 
-  static propTypes = {
-    onPressBanner: PropTypes.func.isRequired
-  };
-
     constructor(props) {
       super(props);
       var dataSource = new ViewPager.DataSource({
@@ -96,7 +93,6 @@ export default class Banner extends Component {
     onIncrementPress = () => {
       this.props.setOrderTab1();
     }
-
 
     render() {
       const {children} = this.props;
@@ -114,7 +110,6 @@ export default class Banner extends Component {
       );
     }
 
-
     _renderPage = (
       data: Object,
       pageID: number | string,) => {
@@ -124,9 +119,10 @@ export default class Banner extends Component {
           underlayColor='#c8c7cc'
           onPress={() => this.onIncrementPress()}
         >
-          <Image
-            source={{uri: data.pic_url}}
-            style={styles.page} />
+
+        <RnImage source={{uri: data.pic_url}}
+        style={styles.page}/>
+
         </TouchableHighlight>
 
       );

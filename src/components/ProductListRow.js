@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 
 import BuyProgressInfo from './BuyProgressInfo';
+import RnImage from '../../diy/RnImage';
 
 export default class ProductListRow extends Component {
   constructor(props) {
@@ -26,7 +27,7 @@ export default class ProductListRow extends Component {
           style={{flex: 1}}
         >
           <View style={{alignItems: "center"}}>
-            <Image
+            <RnImage
               style={[styles.base]}
               source={{uri: item.listImage}}
             />

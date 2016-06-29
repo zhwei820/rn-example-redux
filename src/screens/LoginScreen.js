@@ -14,11 +14,7 @@ import * as appActions from '../reducers/app/actions';
 import Button from 'apsl-react-native-button';
 import TouchButton from '../../diy/TouchButton';
 
-import Image from 'react-native-image-progress';
-import ProgressBar from 'react-native-progress/Bar';
-
-
-
+import RnImage from '../../diy/RnImage';
 
 // this is a traditional React component connected to the redux store
 class LoginScreen extends Component {
@@ -90,15 +86,12 @@ class LoginScreen extends Component {
           Hello
         </TouchButton>
 
-
-        <Image
-          source={{ uri: 'http://loremflickr.com/640/480/dog' }}
-          indicator={ProgressBar}
+        <RnImage source={{ uri: 'http://pointcadres.fr/img/Cadre%20image-paysage-Plage-cocotier-40X120cm.jpg' }}
           style={{
             width: 320,
             height: 240,
-          }}/>
-
+          }}
+        />
 
       </View>
     );

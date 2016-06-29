@@ -10,6 +10,8 @@ import {
 import { connect } from 'react-redux';
 import * as counterActions from '../reducers/counter/actions';
 
+import RnImage from '../../diy/RnImage';
+
 // this is a traditional React component connected to the redux store
 class FirstTabScreen extends Component {
   static navigatorStyle = {
@@ -37,6 +39,7 @@ class FirstTabScreen extends Component {
 
   constructor(props) {
     super(props);
+    console.warn('FirstTabScreen constructor');
     // if you want to listen on navigator events, set this up
     this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
   }
@@ -85,6 +88,8 @@ class FirstTabScreen extends Component {
         <TouchableOpacity onPress={ this.onShowPullRefreshList }>
           <Text style={styles.button}>PullRefreshList Screen</Text>
         </TouchableOpacity>
+
+        <RnImage source={{uri: 'http://facebook.github.io/origami/public/images/blog-hero.jpg?r=1'}}/>
 
       </View>
     );
