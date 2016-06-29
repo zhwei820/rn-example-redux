@@ -52,14 +52,22 @@ function MergeRecursive(obj1, obj2) {
 export default class RefreshList extends Component {
 
   getUrl = (Para) => {
-    let url = OPTIONS.API_URL + APIS[Para[0]] + queryUserInfo + '&last_round_id=' + (Para[1] ? Para[1] : 0) + '&last_weight=' + (Para[2] ? Para[2] : 0);
-    console.log(url);
-    return url;
+
+    let queryExtra = '&last_round_id=' + (Para[1] ? Para[1] : 0) + '&last_weight=' + (Para[2] ? Para[2] : 0);
+    let url = '';
+    url = OPTIONS.API_URL + APIS[Para[0]] + queryUserInfo + queryExtra;
+    if(queryUserInfo){
+      return url;
+    }else {
+      url = OPTIONS.API_URL + APIS[Para[0]] + '?uid=44248888&app_version=1.9.4.2&os_type=android&channel=share' + '&last_round_id=' + queryExtra;
+      return url;
+    }
   }
 
   async getRowData(last_round_id = 0, last_weight = 0) {
     try {
       let response = await fetch(this.getUrl(['list_pro_common', last_round_id, last_weight]));
+
       let responseJson = await response.json();
 
       let data = [];
@@ -134,11 +142,13 @@ export default class RefreshList extends Component {
       // })
   }
   componentWillMount() {
-      // this._loadInitialState().done();
+      this._loadInitialState().done();
     }
 
   constructor(props) {
     super(props);
+    console.warn('Refresh constructor');
+
     this._setLastRoundId(0);
     this._setLastWeight(0);
     this._setPage(1);
@@ -316,7 +326,6 @@ export default class RefreshList extends Component {
     let listView = this._listView();
     return (
       <View style={{flex:1}}>
-
         {listView}
         {this.state.isShowToTop ? <ScrollTopView root={this} ></ScrollTopView>:null}
       </View>

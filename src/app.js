@@ -84,6 +84,14 @@ export default class App {
               selectedIcon: require('../img/two_selected.png'),
               title: 'Screen Two',
               navigatorStyle: {},
+            },
+            {
+              label: 'Refresh',
+              screen: 'example.PullRefreshList',
+              icon: require('../img/two.png'),
+              selectedIcon: require('../img/two_selected.png'),
+              title: 'PullRefreshList',
+              navigatorStyle: {},
             }
           ],
           passProps: {

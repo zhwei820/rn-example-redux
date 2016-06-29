@@ -23,6 +23,7 @@ import ProductListRow from '../components/ProductListRow';
 import Banner from '../components/Banner';
 
 import RefreshList from '../components/RefreshList';
+import RnImage from '../../diy/RnImage';
 
 class PullRefreshList extends Component {
 
@@ -37,9 +38,27 @@ class PullRefreshList extends Component {
 
 
   render() {
+    console.warn('pull Refresh constructor');
+
+    let listView = this.getListView();
     return (
-      <RefreshList onPress={this._onPress} {...this.props}></RefreshList>
-    );
+      <View style={{flex: 1, padding: 20}}>
+
+
+        <RnImage source={{ uri: 'http://pointcadres.fr/img/Cadre%20image-paysage-Plage-cocotier-40X120cm.jpg' }}
+          style={{
+            width: 320,
+            height: 240,
+          }}
+        />
+
+      </View>
+
+    )
+  }
+
+  getListView = () => {
+    return (<RefreshList onPress={this._onPress} {...this.props}></RefreshList>);
   }
 
   _onPress = (rowData) => {

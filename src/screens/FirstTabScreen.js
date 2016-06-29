@@ -85,12 +85,12 @@ class FirstTabScreen extends Component {
         <Text style={{fontWeight: '500'}}>Object prop: {this.props.obj.str}</Text>
         <Text style={{fontWeight: '500'}}>Array prop: {this.props.obj.arr[0].str}</Text>
 
-        <TouchableOpacity onPress={ this.onShowPullRefreshList }>
-          <Text style={styles.button}>PullRefreshList Screen</Text>
-        </TouchableOpacity>
-
-        <RnImage source={{uri: 'http://facebook.github.io/origami/public/images/blog-hero.jpg?r=1'}}/>
-
+        <RnImage source={{ uri: 'http://pointcadres.fr/img/Cadre%20image-paysage-Plage-cocotier-40X120cm.jpg' }}
+          style={{
+            width: 320,
+            height: 240,
+          }}
+        />
       </View>
     );
   }
@@ -137,25 +137,6 @@ class FirstTabScreen extends Component {
     });
   }
 
-  onShowPullRefreshList = () => {
-    this.props.navigator.push({
-      title: "Gifted ListView",
-      screen: "example.PullRefreshList",
-      passProps: {
-        str: 'This is a prop passed in \'navigator.push()\'!',
-        obj: {
-          str: 'This is a prop passed in an object!',
-          arr: [
-            {
-              str: 'This is a prop in an object in an array in an object!'
-            }
-          ]
-        },
-        num: 1234
-      }
-    });
-
-  }
 }
 
 const styles = StyleSheet.create({
