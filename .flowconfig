@@ -1,6 +1,6 @@
 [ignore]
 
-# We fork some components by platform.
+# We fork some component by platform.
 .*/*.web.js
 .*/*.android.js
 

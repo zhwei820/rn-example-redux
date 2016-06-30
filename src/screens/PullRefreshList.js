@@ -18,11 +18,11 @@ import * as screensrActions from '../reducers/screens/actions';
 
 var GiftedSpinner = require('react-native-gifted-spinner');
 
-import ProductListRow from '../components/ProductListRow';
+import ProductListRow from '../component/ProductListRow';
 
-import Banner from '../components/Banner';
+import Banner from '../screencomponent/Banner';
 
-import RefreshList from '../components/RefreshList';
+import RefreshList from '../component/RefreshList';
 import RnImage from '../../diy/RnImage';
 
 var PULLREFRESH = 'PULLREFRESH';

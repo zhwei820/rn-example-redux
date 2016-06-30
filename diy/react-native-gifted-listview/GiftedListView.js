@@ -29,7 +29,7 @@ function MergeRecursive(obj1, obj2) {
 }
 
 import ParallaxScrollView from './tmp';
-import Banner from '../../src/components/Banner';
+import Banner from '../../src/component/Banner';
 
 
 var GiftedSpinner = require('react-native-gifted-spinner');

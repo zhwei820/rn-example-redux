@@ -17,7 +17,7 @@ registerScreens(store, Provider);
 // notice that this is just a simple class, it's not a React component
 export default class App {
   constructor() {
-    // since react-redux only works on components, we need to subscribe this class manually
+    // since react-redux only works on component, we need to subscribe this class manually
     store.subscribe(this.onStoreUpdate);
     store.dispatch(appActions.appInitialized());
   }

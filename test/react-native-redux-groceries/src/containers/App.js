@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import Groceries from '../components/Groceries'
+import Groceries from '../component/Groceries'
 import * as ItemsActions from '../actions/items'
 
 function mapStateToProps(state) {
