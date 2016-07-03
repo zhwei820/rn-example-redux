@@ -5,6 +5,8 @@ import userInfo from './userInfo/userInfo';
 import login from './login/login';
 import webview from './webview/webview';
 import tabOffice from './tabOffice/tabOffice';
+import taskList from './taskList/taskList';
+import timeConsuming from './timeConsuming/timeConsuming';
 
 export {
   app,
@@ -14,4 +16,6 @@ export {
   login,
   webview,
   tabOffice,
+  taskList,
+  timeConsuming,
 };

@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 
-import Colors from '../../constants/Colors';
+import Colors from '../../constant/Colors';
 import Storage from 'react-native-storage';
 
 var storage = new Storage({

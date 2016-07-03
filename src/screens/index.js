@@ -9,6 +9,7 @@ import ModalScreen from './ModalScreen';
 import tabSetting from './tabSetting';
 import tabOffice from './tabOffice';
 import webview from './webview';
+import taskList from './taskList';
 
 // register all screens of the app (including internal ones)
 export function registerScreens(store, Provider) {
@@ -21,5 +22,6 @@ export function registerScreens(store, Provider) {
   Navigation.registerComponent('example.tabSetting', () => tabSetting, store, Provider);
   Navigation.registerComponent('example.tabOffice', () => tabOffice, store, Provider);
   Navigation.registerComponent('example.webview', () => webview, store, Provider);
+  Navigation.registerComponent('example.taskList', () => taskList, store, Provider);
 
 }

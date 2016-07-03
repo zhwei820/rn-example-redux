@@ -13,7 +13,7 @@ import {
 
 import Calendar from 'react-native-calendar-android';
 import Modal from '../lib/react-native-fs-modal';
-import Colors from '../constants/Colors';
+import Colors from '../constant/Colors';
 
 export default class ModalCalendar extends React.Component{
   render() {

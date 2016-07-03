@@ -15,8 +15,8 @@ import {
 
 import NavigationBar from '../ZqOfficeNavigationBar';
 import FileManager from 'react-native-fs';
-import Colors from '../../constants/Colors';
-import api from "../../constants/Network";
+import Colors from '../../constant/Colors';
+import api from "../../constant/Network";
 import {Base64Encode, Base64Decode} from '../../utils/Base64';
 import Spinner from '../../lib/react-native-loading-spinner-overlay';
 import {connect} from 'react-redux';

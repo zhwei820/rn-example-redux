@@ -11,7 +11,7 @@ import {
   Alert,
 } from 'react-native';
 
-import Colors from '../../constants/Colors';
+import Colors from '../../constant/Colors';
 import FileSelect from './FileSelect';
 
 export default class FormItemsFileUploadView extends React.Component{

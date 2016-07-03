@@ -122,12 +122,12 @@ export default class OfficeTab extends React.Component {
 
   onCreated() {
     const {navigator} = this.props;
-    // navigator.push({
-    //   name: "TaskListContainer",
-    //   component: TaskListContainer,
-    //   url: OFFICE_CREATED,
-    //   navBarTitle: "我的申请",
-    // });
+    this.props.navigator.push({
+      title: "More",
+      screen: "example.taskList",
+      animated: true,
+    })
+
   }
 
   onApproval() {

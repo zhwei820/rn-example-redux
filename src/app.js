@@ -14,6 +14,8 @@ const store = createStoreWithMiddleware(reducer);
 import { registerScreens } from './screens';
 registerScreens(store, Provider);
 
+console.disableYellowBox = true;
+
 // notice that this is just a simple class, it's not a React component
 export default class App {
   constructor() {

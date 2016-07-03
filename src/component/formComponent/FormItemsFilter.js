@@ -9,7 +9,7 @@ import {
   Dimensions,
 } from 'react-native';
 
-import Colors from '../../constants/Colors';
+import Colors from '../../constant/Colors';
 import FormItemsTextView from './FormItemsTextView';
 import FormItemsTextInputView from './FormItemsTextInputView';
 import FormItemsSpinnerView from './FormItemsSpinnerView';

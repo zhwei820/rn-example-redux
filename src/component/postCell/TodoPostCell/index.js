@@ -5,7 +5,7 @@ import {Text, Image, View, TouchableOpacity} from 'react-native';
 
 
 import styles from "./style";
-import Colors from '../../../constants/Colors';
+import Colors from '../../../constant/Colors';
 import iconNext from '../../../img/icon/icon-next.png';
 var _navigator;
 export default class TodoPostCell extends React.Component {

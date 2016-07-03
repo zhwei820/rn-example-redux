@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import Colors from '../../constants/Colors';
+import Colors from '../../constant/Colors';
 
 export default class DateItem extends React.Component{
   constructor(props) {

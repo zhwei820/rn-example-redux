@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 
-import Colors from '../../constants/Colors';
+import Colors from '../../constant/Colors';
 
 import TextItem from './TextItem';
 import TextareaItem from './TextareaItem';

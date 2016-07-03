@@ -9,7 +9,7 @@ import {
   Alert,
 } from 'react-native';
 
-import Colors from '../../constants/Colors';
+import Colors from '../../constant/Colors';
 
 export default class TextItem extends React.Component{
   constructor(props) {

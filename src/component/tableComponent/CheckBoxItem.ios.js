@@ -3,7 +3,7 @@
 import React from 'react';
 import {StyleSheet, Image, Text, View} from 'react-native';
 
-import Colors from '../../constants/Colors';
+import Colors from '../../constant/Colors';
 
 import {
   MKIconToggle,

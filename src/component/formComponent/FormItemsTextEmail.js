@@ -10,7 +10,7 @@ import {
   Alert,
 } from 'react-native';
 var _this;
-import Colors from '../../constants/Colors';
+import Colors from '../../constant/Colors';
 
 export default class FormItemsTextEmail extends React.Component{
   constructor(props) {

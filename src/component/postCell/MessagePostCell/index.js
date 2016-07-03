@@ -9,7 +9,7 @@ import React from 'react';
 import {Text, Image, View, TouchableHighlight} from 'react-native';
 
 import styles from "./style";
-import Colors from '../../../constants/Colors';
+import Colors from '../../../constant/Colors';
 
 export default class MessagePostCell extends React.Component {
 

@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 
-import Colors from '../../constants/Colors';
+import Colors from '../../constant/Colors';
 
 export default class FormItemsTextareaView extends React.Component{
   constructor(props) {

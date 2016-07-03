@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import FileManager from 'react-native-fs';
-import api from "../constants/Network";
+import api from "../constant/Network";
 import Intent from 'react-native-android-intent';
 let path = Platform.OS === 'ios' ? `${FileManager.DocumentDirectoryPath}/attachment/`:'/sdcard/attachment/';
 let filePath;

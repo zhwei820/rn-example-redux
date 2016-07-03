@@ -11,8 +11,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import Colors from '../../constants/Colors';
-import * as types from '../../constants/NavigatorTypes';
+import Colors from '../../constant/Colors';
+import * as types from '../../constant/NavigatorTypes';
 import StaffListContainer from '../../containers/StaffListContainer';
 
 export default class FormItemsSelectStaff extends React.Component{

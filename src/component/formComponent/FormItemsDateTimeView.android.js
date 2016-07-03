@@ -12,7 +12,7 @@ import {
   NativeModules,
 } from 'react-native';
 
-import Colors from '../../constants/Colors';
+import Colors from '../../constant/Colors';
 import {MKButton, MKColor} from 'react-native-material-kit';
 
 var deviceHeight = Dimensions.get('window').height;

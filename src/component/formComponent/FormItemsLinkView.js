@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import Colors from '../../constants/Colors';
+import Colors from '../../constant/Colors';
 import TaskDetailContainer from '../../containers/TaskDetailContainer';
 
 export default class FormItemsLinkView extends React.Component{

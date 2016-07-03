@@ -12,7 +12,7 @@ var {
   StyleSheet,
 } = React;
 
-import Colors from '../../../constants/Colors';
+import Colors from '../../../constant/Colors';
 var deviceHeight = Dimensions.get('window').height;
 var itemHeight = deviceHeight / 10;
 
