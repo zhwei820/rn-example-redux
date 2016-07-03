@@ -39,7 +39,6 @@ class FirstTabScreen extends Component {
 
   constructor(props) {
     super(props);
-    console.warn('FirstTabScreen constructor');
     // if you want to listen on navigator events, set this up
     this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
   }

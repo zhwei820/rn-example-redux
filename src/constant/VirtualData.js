@@ -1,0 +1,1055 @@
+export const LOGIN_DATA = {
+  post: '六级领导',
+  email: '',
+  nickName: '张三',
+  userId: 169,
+  firstLogin: false,
+  code: 'success',
+  dept: '集团信息技术部',
+  companyName: 'XX集团',
+  msg: '登入成功！',
+  telephone: '15102113061'
+};
+export const COUNT_DATA = {
+  count: 39,
+};
+export const NEWS_DATA = [{
+  id: 242,
+  title: '中晴企业集团简介',
+  path: '20160426/e39c8b6e-e902-4ef1-b457-7e486aab3977-homecms-appcms.jpg'
+}, {
+  id: 243,
+  title: '中晴企业集团移动办公平台',
+  path: '20160426/c24c3508-0e24-4004-a1a2-1aa05b4a6b78-homecms-appcms.jpg'
+}, {
+  id: 244,
+  title: 'inthecar',
+  path: '20160426/4b01d95b-3122-4572-bc78-3206dc4424d9-homecms-appcms.jpg'
+}, {
+  id: 290,
+  title: '常用模板下载',
+  path: '20160612/d9c641a9-cd0b-437c-a2ca-d7aa4d73e64c-homecms-appcms.jpg'
+}];
+export const NOTICE_LIST_DATA = {
+  "count": 3,
+  "contentList": [{
+    "cmsId": 272,
+    "TITLE": "关于2015年度劳动节放假安排的通知",
+    "SUMMARY": "关于2015年度劳动节放假安排的通知",
+    "CONTENT": "<div><p>​​​​​​​<span style=\"color: red; font-family: 华文中宋; font-size: 48pt;\">中 晴 集 团 文 件</span></p><p></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">XX集团人〔201</span><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">5</span><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">〕</span><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">007</span><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">号</span></p><div><p></p></div><p></p><p><span style=\"font-family: 华文中宋; font-size: 22pt;\">关于2015年度劳动节放假安排的通知</span></p><p></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">相关各部门、各事业部、各直属单位：</span></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">按照国务院2015年度放假安排的通知，现将集团2015年度劳动节放假调休的具体安排通知如下：</span></p><p><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">一、劳动节：</span></strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">5</span><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">月1日放假，与周末连休。</span></p><p><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">二</span></strong><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">、节假日注意事项：</span></strong></p><p><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">1.</span></strong><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">各级领导必须高度重视本单位的节日安全、消防及保卫工作，节前安排专人排查各种安全隐患，对发现的问题及时整改到位。</span></strong></p><p><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">2.</span></strong><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">各部门、各单位根据本部门、本单位的实际情况，安排好值班人员，并将值班安排及人员名单上报管媛媛处（邮箱：yuanyuan.guan@bdcluster.com ）。 </span></strong></p><p><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">3.</span></strong><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">凡因单位领导失职或轻视导致的安全事故，集团将追究其领导责任。</span></strong></p><p><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">4.</span></strong><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">各单位要加强对全体员工节假日工作、生活、出行的安全教育，确保全员平安祥和。</span></strong></p><p><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">5.</span></strong><strong><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">各部门、各单位领导及相关负责人手机要24小时开机，确保联系畅通万无一失。</span></strong></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">特此通知</span></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">&nbsp;</span></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">&nbsp;</span></p><p style=\"margin-left: 303.25pt;\"><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">XX集团<br>2015年4月13日</span></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">&nbsp;</span></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">&nbsp;</span></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">&nbsp;</span></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">&nbsp;</span></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">&nbsp;</span></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">&nbsp;</span></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">&nbsp;</span></p><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">&nbsp;</span></p><div><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">XX集团人力资源部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2015年04月14日印发</span></p></div><p><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">&nbsp;(</span><span style=\"font-family: 仿宋_gb2312; font-size: 16pt;\">共印 &nbsp;份)</span></p></div>",
+    "createTime": "2016-06-17 09:07:57"
+  }, {
+    "cmsId": 274,
+    "TITLE": "关于《固定资产管理办法》下发执行的通知",
+    "SUMMARY": "关于《固定资产管理办法》下发执行的通知",
+    "CONTENT": "<p align=\"center\" class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; text-align: center; line-height: 30pt; mso-line-height-rule: exactly;\"><span lang=\"EN-US\"><o:p>&nbsp;</o:p></span></p><p align=\"center\" class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; text-align: center; line-height: 60pt; mso-line-height-rule: exactly; tab-stops: 22.5pt;\"><span style=\"color: red; letter-spacing: -2pt; font-family: 华文中宋; font-size: 48pt;\">中 晴 集 团 文 件</span></p><p align=\"center\" class=\"MsoNormal\" style=\"margin: 0cm 0cm 7.8pt; text-align: center; line-height: 30pt; mso-line-height-rule: exactly; mso-para-margin-bottom: .5gd;\"><font face=\"宋体\"><span style=\"font-family: 仿宋_GB2312; font-size: 16pt;\">XX集团仓〔<span lang=\"EN-US\">201</span></span><span lang=\"EN-US\" style=\"font-family: 仿宋_GB2312; font-size: 16pt; mso-bidi-font-weight: bold; mso-font-kerning: 16.0pt;\">6</span><span style=\"font-family: 仿宋_GB2312; font-size: 16pt;\">〕</span><span lang=\"EN-US\" style=\"font-family: 仿宋_GB2312; font-size: 16pt; mso-bidi-font-weight: bold; mso-font-kerning: 16.0pt;\">02</span><span style=\"font-family: 仿宋_GB2312; font-size: 16pt;\">号<span lang=\"EN-US\"><o:p></o:p></span></span></font></p><div style=\"border-width: 4.5pt medium medium; border-style: double none none; border-color: red currentColor currentColor; padding: 1pt 0cm 0cm; mso-border-top-alt: thick-thin-small-gap red 4.5pt; mso-element: para-border-div;\"><p align=\"center\" class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; padding: 0cm; border: currentColor; text-align: center; line-height: 30pt; mso-line-height-rule: exactly; mso-padding-alt: 1.0pt 0cm 0cm 0cm; mso-border-top-alt: thick-thin-small-gap red 4.5pt;\"><span lang=\"EN-US\"><o:p>&nbsp;</o:p></span></p></div><p align=\"center\" class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; text-align: center; line-height: 30pt; -ms-layout-grid-mode: char; mso-line-height-rule: exactly; mso-layout-grid-align: none;\"><span lang=\"EN-US\"><o:p>&nbsp;</o:p></span></p><p align=\"center\" class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; text-align: center; line-height: 30pt; -ms-layout-grid-mode: char; mso-line-height-rule: exactly; mso-layout-grid-align: none;\"><span style=\"font-family: 华文中宋; font-size: 22pt; mso-bidi-font-weight: bold;\">关于《固定资产管理办法》下发执行的通知<span lang=\"EN-US\"><o:p></o:p></span></span></p><p align=\"center\" class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; text-align: center; line-height: 30pt; -ms-layout-grid-mode: char; mso-line-height-rule: exactly; mso-layout-grid-align: none;\"><span lang=\"EN-US\"><o:p>&nbsp;</o:p></span></p><p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; line-height: 30pt; -ms-layout-grid-mode: char; mso-line-height-rule: exactly; mso-layout-grid-align: none;\"><font face=\"宋体\"><span style=\"font-family: 仿宋_GB2312; font-size: 16pt; mso-bidi-font-weight: bold; mso-font-kerning: 16.0pt;\">相关各部门、各事业部、各直属单位：</span><span lang=\"EN-US\" style=\"font-family: 仿宋_GB2312; font-size: 16pt; mso-font-kerning: 16.0pt;\"><o:p></o:p></span></font></p><p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; line-height: 30pt; text-indent: 40pt; -ms-layout-grid-mode: char; mso-line-height-rule: exactly; mso-char-indent-count: 2.5; mso-layout-grid-align: none;\"><font face=\"宋体\"><span style=\"font-family: 仿宋_GB2312; font-size: 16pt; mso-bidi-font-weight: bold; mso-font-kerning: 16.0pt;\">为加强集团公司固定资产管理，提高使用效率，确保资产安全、完整，明确各公司固定资产管理及使用的权责关系，规范固定资产管理流程，明确各环节的管控职责；降低成本、减少浪费、提高效率，结合公司现有实际情况，特下发此通知。</span></font></p><p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; line-height: 30pt; text-indent: 32pt; -ms-layout-grid-mode: char; mso-line-height-rule: exactly; mso-char-indent-count: 2.0; mso-layout-grid-align: none;\"><span style=\"font-family: 仿宋_GB2312; font-size: 16pt; mso-font-kerning: 16.0pt;\"><font face=\"宋体\">附：XX集团《固定资产管理办法》</font></span></p><p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; line-height: 30pt; -ms-layout-grid-mode: char; mso-line-height-rule: exactly; mso-layout-grid-align: none;\"><span lang=\"EN-US\" style=\"font-family: 仿宋_GB2312; font-size: 16pt; mso-font-kerning: 16.0pt;\"><o:p><font face=\"宋体\">&nbsp;</font></o:p></span></p><p align=\"right\" class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; text-align: right; line-height: 30pt; text-indent: 32pt; -ms-layout-grid-mode: char; mso-line-height-rule: exactly; mso-char-indent-count: 2.0; mso-layout-grid-align: none;\"><span style=\"font-family: 仿宋_GB2312; font-size: 16pt; mso-font-kerning: 16.0pt;\"><font face=\"宋体\">XX集团<span lang=\"EN-US\"><o:p></o:p></span></font></span></p><div style=\"border-width: 1pt medium; border-style: solid none; border-color: windowtext currentColor; padding: 1pt 0cm; mso-border-top-alt: solid windowtext .5pt; mso-border-bottom-alt: solid windowtext .5pt; mso-element: para-border-div;\"><p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; padding: 0cm; border: currentColor; line-height: 30pt; text-indent: 14pt; mso-line-height-rule: exactly; mso-char-indent-count: 1.0; mso-padding-alt: 1.0pt 0cm 1.0pt 0cm; mso-border-top-alt: solid windowtext .5pt; mso-border-bottom-alt: solid windowtext .5pt; mso-layout-grid-align: none; mso-border-between: .5pt solid windowtext; mso-padding-between: 1.0pt;\"><span style=\"font-family: 仿宋_GB2312; font-size: 14pt;\"><font face=\"宋体\">XX集团仓储部<span lang=\"EN-US\"><span style=\"mso-spacerun: yes;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style=\"mso-spacerun: yes;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>2016</span>年<span lang=\"EN-US\">01</span>月<span lang=\"EN-US\">05</span>日印发<span lang=\"EN-US\"><o:p></o:p></span></font></span></p></div><p align=\"right\" class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; text-align: right; mso-pagination: widow-orphan;\"><font face=\"宋体\"><span lang=\"EN-US\" style=\"font-family: 仿宋_GB2312; font-size: 14pt;\"><span style=\"mso-spacerun: yes;\">&nbsp;</span>(</span><span style=\"font-family: 仿宋_GB2312; font-size: 14pt;\">共印 <span lang=\"EN-US\">1 </span>份<span lang=\"EN-US\">)</span></span><span lang=\"EN-US\" style=\"font-family: 宋体; font-size: 12pt; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt;\"><o:p></o:p></span></font></p>",
+    "createTime": "2016-05-05 17:02:01"
+  }, {
+    "cmsId": 273,
+    "TITLE": "公出单",
+    "SUMMARY": "",
+    "CONTENT": "<p align=\"center\" class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; text-align: center; line-height: 20pt; mso-line-height-rule: exactly;\"><b style=\"mso-bidi-font-weight: normal;\"><span style=\"font-family: 宋体; font-size: 18pt;\">公 出 单 </span></b><b style=\"mso-bidi-font-weight: normal;\"><span lang=\"EN-US\" style=\"font-family: 宋体; font-size: 18pt; mso-hansi-font-family: Calibri;\"><o:p></o:p></span></b></p><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 330.75pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: 31.5;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">填表日期：</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;&nbsp;&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">年</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;&nbsp;&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">月</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;&nbsp;&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">日</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p><div align=\"center\"><font face=\"宋体\"><!--{cke_protected}{C}%3C!%2D%2D%5Bif%20!supportMisalignedColumns%5D%2D%2D%3E--> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> </font><font face=\"宋体\"> <!--{cke_protected}{C}%3C!%2D%2D%5Bendif%5D%2D%2D%3E--> </font><table class=\"MsoNormalTable\" style=\"border: currentColor; border-collapse: collapse; mso-table-layout-alt: fixed; mso-border-alt: solid black 1.0pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-insideh: 1.0pt solid black; mso-border-insidev: 1.0pt solid black;\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\"><tbody><tr style=\"height: 19pt; mso-yfti-irow: 0; mso-yfti-firstrow: yes;\"><td width=\"111\" style=\"padding: 0cm 5.4pt; border: 1pt solid black; width: 83.15pt; height: 19pt; background-color: transparent;\" colspan=\"2\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 15.75pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: 1.5;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">姓名</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"100\" style=\"border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: black black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 75.1pt; height: 19pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt;\"><p align=\"center\" class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-align: center; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"99\" style=\"border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: black black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 74.5pt; height: 19pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt;\" colspan=\"5\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">公司</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><font face=\"Calibri\">/</font></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">部门</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"155\" style=\"border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: black black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 116.15pt; height: 19pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt;\" colspan=\"5\"><p align=\"center\" class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-align: center; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"68\" style=\"border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: black black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 51.25pt; height: 19pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">职位</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"122\" style=\"border-width: 1pt 1pt 1pt 0px; border-style: solid solid solid none; border-color: black black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 91.85pt; height: 19pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt;\" colspan=\"2\"><p align=\"center\" class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-align: center; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td></tr><tr style=\"height: 19pt; mso-yfti-irow: 1;\"><td width=\"111\" style=\"border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 0cm 5.4pt; width: 83.15pt; height: 19pt; background-color: transparent; mso-border-top-alt: solid black 1.0pt;\" colspan=\"2\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 5.25pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: .5;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">公出时间</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"354\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 265.75pt; height: 19pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt;\" colspan=\"11\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 21pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: 2.0;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"191\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 143.1pt; height: 19pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt;\" colspan=\"5\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 26.25pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: 2.5;\"><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">共</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">天</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">时</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td></tr><tr style=\"height: 39.55pt; mso-yfti-irow: 2;\"><td width=\"111\" style=\"border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: rgb(0, 0, 0) black windowtext; padding: 0cm 5.4pt; width: 83.15pt; height: 39.55pt; background-color: transparent; mso-border-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt; mso-border-bottom-alt: solid windowtext .5pt;\" colspan=\"2\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">公出地点及事由</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 10.5pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: 1.0;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"545\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black windowtext rgb(0, 0, 0); padding: 0cm 5.4pt; width: 408.85pt; height: 39.55pt; background-color: transparent; mso-border-alt: solid black 1.0pt; mso-border-left-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt; mso-border-bottom-alt: solid windowtext .5pt;\" colspan=\"16\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td></tr><tr style=\"height: 25.9pt; mso-yfti-irow: 3;\"><td width=\"111\" style=\"border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: rgb(0, 0, 0) black windowtext; padding: 0cm 5.4pt; width: 83.15pt; height: 25.9pt; background-color: transparent; mso-border-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt; mso-border-bottom-alt: solid windowtext .5pt;\" rowspan=\"2\" colspan=\"2\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 10.5pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: 1.0;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;</font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">用车需求</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"100\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 75.05pt; height: 25.9pt; background-color: transparent; mso-border-left-alt: black 1.0pt; mso-border-top-alt: windowtext .5pt; mso-border-bottom-alt: black 1.0pt; mso-border-right-alt: windowtext .5pt; mso-border-style-alt: solid;\" rowspan=\"2\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span style=\"font-family: 宋体; font-size: 9pt; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri;\">（</span><span style=\"font-size: 9pt;\"><font face=\"Calibri\"> </font></span><span style=\"font-family: 宋体; font-size: 9pt; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri;\">）是（</span><span style=\"font-size: 9pt;\"><font face=\"Calibri\"> </font></span><span style=\"font-family: 宋体; font-size: 9pt; mso-hansi-font-family: Calibri; mso-ascii-font-family: Calibri;\">）否</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"67\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext windowtext rgb(0, 0, 0); padding: 0cm 5.4pt; width: 50.2pt; height: 25.9pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">出车司机</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"78\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext windowtext rgb(0, 0, 0); padding: 0cm 5.4pt; width: 58.55pt; height: 25.9pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"82\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext windowtext rgb(0, 0, 0); padding: 0cm 5.4pt; width: 61.6pt; height: 25.9pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;</font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">出车时间</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"66\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext windowtext rgb(0, 0, 0); padding: 0cm 5.4pt; width: 49.4pt; height: 25.9pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;\" colspan=\"2\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"83\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext windowtext rgb(0, 0, 0); padding: 0cm 5.4pt; width: 62.35pt; height: 25.9pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;</font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">返回时间</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"69\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black windowtext rgb(0, 0, 0); padding: 0cm 5.4pt; width: 51.7pt; height: 25.9pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; mso-border-right-alt: solid black 1.0pt;\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td></tr><tr style=\"height: 23.95pt; mso-yfti-irow: 4;\"><td width=\"67\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 50.2pt; height: 23.95pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; mso-border-bottom-alt: solid black 1.0pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">司机签字</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"78\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 58.55pt; height: 23.95pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; mso-border-bottom-alt: solid black 1.0pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"82\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 61.6pt; height: 23.95pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; mso-border-bottom-alt: solid black 1.0pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">出车公里数</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"66\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 49.4pt; height: 23.95pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; mso-border-bottom-alt: solid black 1.0pt;\" colspan=\"2\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"83\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 62.35pt; height: 23.95pt; background-color: transparent; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; mso-border-bottom-alt: solid black 1.0pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">返回公里数</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"69\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 51.7pt; height: 23.95pt; background-color: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt;\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td></tr><tr style=\"height: 19pt; mso-yfti-irow: 5;\"><td width=\"111\" style=\"border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: rgb(0, 0, 0) black black windowtext; padding: 0cm 5.4pt; width: 83.15pt; height: 19pt; background-color: transparent; mso-border-left-alt: windowtext .5pt; mso-border-top-alt: windowtext .5pt; mso-border-bottom-alt: black 1.0pt; mso-border-right-alt: black 1.0pt; mso-border-style-alt: solid;\" rowspan=\"2\" colspan=\"2\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 15.75pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: 1.5;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;</font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">审</span><span style=\"mso-bidi-font-size: 10.5pt;\"><font face=\"Calibri\"> </font></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">批</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"124\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 93.3pt; height: 19pt; background-color: transparent; mso-border-alt: solid black 1.0pt; mso-border-left-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt; mso-border-right-alt: solid windowtext .5pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;&nbsp;&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">直接上级</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"143\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 107.2pt; height: 19pt; background-color: transparent; mso-border-left-alt: windowtext .5pt; mso-border-top-alt: black 1.0pt; mso-border-bottom-alt: black 1.0pt; mso-border-right-alt: windowtext .5pt; mso-border-style-alt: solid;\" colspan=\"5\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;</font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">部门</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><font face=\"Calibri\">/</font></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">事业部负责人</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"126\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 94.3pt; height: 19pt; background-color: transparent; mso-border-left-alt: windowtext .5pt; mso-border-top-alt: black 1.0pt; mso-border-bottom-alt: black 1.0pt; mso-border-right-alt: windowtext .5pt; mso-border-style-alt: solid;\" colspan=\"4\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">行政部</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"152\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 114.05pt; height: 19pt; background-color: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid black 1.0pt;\" colspan=\"4\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp;&nbsp;&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">人力资源部</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td></tr><tr style=\"height: 26pt; mso-yfti-irow: 6;\"><td width=\"124\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 93.3pt; height: 26pt; background-color: transparent; mso-border-alt: solid black 1.0pt; mso-border-left-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt; mso-border-right-alt: solid windowtext .5pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 73.5pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: 7.0;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"143\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 107.2pt; height: 26pt; background-color: transparent; mso-border-left-alt: windowtext .5pt; mso-border-top-alt: black 1.0pt; mso-border-bottom-alt: black 1.0pt; mso-border-right-alt: windowtext .5pt; mso-border-style-alt: solid;\" colspan=\"5\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 73.5pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: 7.0;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"126\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) windowtext black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 94.3pt; height: 26pt; background-color: transparent; mso-border-left-alt: windowtext .5pt; mso-border-top-alt: black 1.0pt; mso-border-bottom-alt: black 1.0pt; mso-border-right-alt: windowtext .5pt; mso-border-style-alt: solid;\" colspan=\"4\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 73.5pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: 7.0;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"152\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 114.05pt; height: 26pt; background-color: transparent; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid black 1.0pt;\" colspan=\"4\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 73.5pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: 7.0;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td></tr><tr style=\"height: 34.55pt; mso-yfti-irow: 7;\"><td width=\"656\" style=\"border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 0cm 5.4pt; width: 492pt; height: 34.55pt; background-color: transparent; mso-border-top-alt: solid black 1.0pt;\" colspan=\"18\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span style=\"font-family: 宋体; mso-bidi-font-size: 10.5pt;\">警卫室：</span><span lang=\"EN-US\" style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"font-family: 宋体; mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\">&nbsp;&nbsp;&nbsp; </span>___________</span><span style=\"font-family: 宋体; mso-bidi-font-size: 10.5pt;\">员工因公务外出，请予以放行。并请认真记录外出及返回时间。</span><span lang=\"EN-US\" style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 372.75pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: 35.5;\"><span style=\"font-family: 宋体; mso-bidi-font-size: 10.5pt;\">日期：</span><span lang=\"EN-US\" style=\"font-family: 隶书; mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td></tr><tr style=\"height: 22.4pt; mso-yfti-irow: 8;\"><td width=\"86\" style=\"border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 0cm 5.4pt; width: 64.2pt; height: 22.4pt; background-color: transparent; mso-border-top-alt: solid black 1.0pt;\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 5.25pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: .5;\"><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">外出时间</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"133\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 99.85pt; height: 22.4pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"86\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 64.15pt; height: 22.4pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 5.25pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: .5;\"><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">返回时间</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"129\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 96.55pt; height: 22.4pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt;\" colspan=\"4\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td><td width=\"79\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 59.6pt; height: 22.4pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt;\" colspan=\"4\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 5.25pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: .5;\"><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">警卫签名</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"144\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 107.65pt; height: 22.4pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt;\" colspan=\"3\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td></tr><tr style=\"height: 22.4pt; mso-yfti-irow: 9; mso-yfti-lastrow: yes;\"><td width=\"86\" style=\"border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: rgb(0, 0, 0) black black; padding: 0cm 5.4pt; width: 64.2pt; height: 22.4pt; background-color: transparent; mso-border-top-alt: solid black 1.0pt;\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; text-indent: 5.25pt; mso-para-margin-right: -2.3gd; mso-char-indent-count: .5;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><span style=\"mso-spacerun: yes;\"><font face=\"Calibri\">&nbsp; </font></span></span><span style=\"font-family: 宋体; mso-hansi-font-family: Calibri; mso-bidi-font-size: 10.5pt; mso-ascii-font-family: Calibri;\">备注</span><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p></o:p></span></p></td><td width=\"570\" style=\"border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: rgb(0, 0, 0) black black rgb(0, 0, 0); padding: 0cm 5.4pt; width: 427.8pt; height: 22.4pt; background-color: transparent; mso-border-left-alt: solid black 1.0pt; mso-border-top-alt: solid black 1.0pt;\" colspan=\"17\"><p class=\"MsoNormal\" style=\"margin: 0cm -24.15pt 0pt 0cm; mso-para-margin-right: -2.3gd;\"><span lang=\"EN-US\" style=\"mso-bidi-font-size: 10.5pt;\"><o:p><font face=\"Calibri\">&nbsp;</font></o:p></span></p></td></tr><tr height=\"0\"><td width=\"86\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"25\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"100\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"8\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"17\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"43\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"26\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"6\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"46\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"22\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"55\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"5\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"27\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"39\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"8\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"21\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"54\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td><td width=\"69\" style=\"border: 0px rgb(0, 0, 0); background-color: transparent;\"></td></tr></tbody></table><font face=\"宋体\"> </font></div>",
+    "createTime": "2016-04-29 15:04:16"
+  }]
+};
+export const ADDRESS_DATA = [{
+  "id": 43,
+  "username": "wangaihua",
+  "displayName": "王1",
+  "email": "",
+  "mobile": "",
+  "compayName": "XX集团"
+}, {
+  "id": 50,
+  "username": "wanghairong",
+  "displayName": "王2",
+  "email": "",
+  "mobile": "",
+  "compayName": "XX集团"
+}, {
+  "id": 60,
+  "username": "wanghao",
+  "displayName": "王3",
+  "email": "",
+  "mobile": "",
+  "compayName": "XX集团"
+}, {
+  "id": 64,
+  "username": "wangyanqiu",
+  "displayName": "王4",
+  "email": "",
+  "mobile": "",
+  "compayName": "XX集团"
+}, {
+  "id": 68,
+  "username": "wanghao1",
+  "displayName": "王5",
+  "email": "",
+  "mobile": "",
+  "compayName": "XX集团"
+}, {
+  "id": 72,
+  "username": "wangjuhua",
+  "displayName": "王6",
+  "email": "",
+  "mobile": "",
+  "compayName": "XX集团"
+}, {
+  "id": 75,
+  "username": "wanglili",
+  "displayName": "王7",
+  "email": "",
+  "mobile": "",
+  "compayName": "XX集团"
+}, {
+  "id": 105,
+  "username": "wangzhengyong",
+  "displayName": "王8",
+  "email": "",
+  "mobile": "",
+  "compayName": "XX集团"
+}, {
+  "id": 185,
+  "username": "wangxuan",
+  "displayName": "王9",
+  "email": "",
+  "mobile": "",
+  "compayName": "XX集团"
+}, {
+  "id": 197,
+  "username": "wanglu",
+  "displayName": "王10",
+  "email": "",
+  "mobile": "",
+  "compayName": "XX集团"
+}, {
+  "id": 199,
+  "username": "wangbin",
+  "displayName": "王11",
+  "email": "",
+  "mobile": "",
+  "compayName": "XX集团"
+}, {
+  "id": 307,
+  "username": "wangyanzhou",
+  "displayName": "王12",
+  "email": "",
+  "mobile": "",
+  "compayName": "XX集团"
+}]
+export const TASK_LIST_DATA = {
+  "process": [{
+    "id": 129,
+    "name": "申购申请"
+  }, {
+    "id": 131,
+    "name": "请休假申请"
+  }, {
+    "id": 132,
+    "name": "加班申请"
+  }, {
+    "id": 133,
+    "name": "未打卡说明"
+  }, {
+    "id": 134,
+    "name": "贵重物品申请"
+  }, {
+    "id": 135,
+    "name": "用印申请"
+  }],
+  "pageNo": 1,
+  "list": [{
+    "taskId": "7083",
+    "title": "请休假申请",
+    "name": "提交申请",
+    "startTime": "",
+    "processInstanceId": "1397706",
+    "applicantName": "张三",
+    "processNo": "ZQLE00000001",
+    "processTitle": "请休假申请单-颜",
+    "status": "待处理",
+    "timeOut": false
+  }, {
+    "taskId": "7412",
+    "title": "申购申请",
+    "name": "六级领导",
+    "startTime": "2016-06-12 16:45:07",
+    "processInstanceId": "1417737",
+    "applicantName": "李四",
+    "processNo": "ZQPR00000011",
+    "processTitle": "转办",
+    "status": "待处理",
+    "timeOut": true
+  }, {
+    "taskId": "8113",
+    "title": "申购申请",
+    "name": "六级领导",
+    "startTime": "2016-06-13 15:09:03",
+    "processInstanceId": "1422809",
+    "applicantName": "赵五",
+    "processNo": "ZQPR00000016",
+    "processTitle": "123附件",
+    "status": "待处理",
+    "timeOut": true
+  }, {
+    "taskId": "8107",
+    "title": "加班申请",
+    "name": "六级领导",
+    "startTime": "2016-06-14 15:29:45",
+    "processInstanceId": "1425023",
+    "applicantName": "李四",
+    "processNo": "ZQJB00000011",
+    "processTitle": "加班转办再转办",
+    "status": "待处理",
+    "timeOut": true
+  }, {
+    "taskId": "7854",
+    "title": "加班申请",
+    "name": "一级领导",
+    "startTime": "2016-06-14 16:48:35",
+    "processInstanceId": "1425400",
+    "applicantName": "李四",
+    "processNo": "ZQJB00000015",
+    "processTitle": "clm3",
+    "status": "待处理",
+    "timeOut": true
+  }, {
+    "taskId": "7609",
+    "title": "未打卡说明",
+    "name": "六级领导",
+    "startTime": "2016-06-15 08:52:44",
+    "processInstanceId": "1430059",
+    "applicantName": "陈六",
+    "processNo": "ZQDK00000029",
+    "processTitle": "123",
+    "status": "待处理",
+    "timeOut": true
+  }, {
+    "taskId": "7761",
+    "title": "未打卡说明",
+    "name": "六级领导",
+    "startTime": "2016-06-16 08:39:22",
+    "processInstanceId": "1435219",
+    "applicantName": "陈六",
+    "processNo": "ZQDK00000035",
+    "processTitle": "123213",
+    "status": "待处理",
+    "timeOut": true
+  }, {
+    "taskId": "7786",
+    "title": "未打卡说明",
+    "name": "六级领导",
+    "startTime": "2016-06-16 14:01:09",
+    "processInstanceId": "1427520",
+    "applicantName": "陈六",
+    "processNo": "ZQDK00000026",
+    "processTitle": "213123",
+    "status": "待处理",
+    "timeOut": true
+  }, {
+    "taskId": "7832",
+    "title": "未打卡说明",
+    "name": "六级领导",
+    "startTime": "2016-06-17 11:54:49",
+    "processInstanceId": "1445192",
+    "applicantName": "陈六",
+    "processNo": "ZQDK00000040",
+    "processTitle": "213",
+    "status": "待处理",
+    "timeOut": true
+  }, {
+    "taskId": "7902",
+    "title": "加班申请",
+    "name": "六级领导",
+    "startTime": "2016-06-17 15:03:13",
+    "processInstanceId": "1450303",
+    "applicantName": "李四",
+    "processNo": "ZQJB00000018",
+    "processTitle": "加班323",
+    "status": "待处理",
+    "timeOut": true
+  }]
+};
+export const TASK_DETAIL_DATA = {
+  "historicTasks": [{
+    "id": "1455696",
+    "nodeName": "六级领导",
+    "startTime": "2016-06-20 11:02:56",
+    "assignee": "张三",
+    "deleteReason": "",
+    "result": "",
+    "approvalComments": "",
+    "approvalRemark": ""
+  }, {
+    "id": "1455693",
+    "nodeName": "五级领导",
+    "startTime": "2016-06-20 11:02:56",
+    "endTime": "2016-06-20 11:02:56",
+    "deleteReason": "跳过",
+    "result": "",
+    "approvalComments": "",
+    "approvalRemark": ""
+  }, {
+    "id": "1455690",
+    "nodeName": "四级领导",
+    "startTime": "2016-06-20 11:02:56",
+    "endTime": "2016-06-20 11:02:56",
+    "deleteReason": "跳过",
+    "result": "",
+    "approvalComments": "",
+    "approvalRemark": ""
+  }, {
+    "id": "1455687",
+    "nodeName": "三级领导",
+    "startTime": "2016-06-20 11:02:56",
+    "endTime": "2016-06-20 11:02:56",
+    "deleteReason": "跳过",
+    "result": "",
+    "approvalComments": "",
+    "approvalRemark": ""
+  }, {
+    "id": "1455684",
+    "nodeName": "二级领导",
+    "startTime": "2016-06-20 11:02:55",
+    "endTime": "2016-06-20 11:02:56",
+    "deleteReason": "跳过",
+    "result": "",
+    "approvalComments": "",
+    "approvalRemark": ""
+  }, {
+    "id": "1425061",
+    "nodeName": "一级领导",
+    "startTime": "2016-06-14 15:29:45",
+    "endTime": "2016-06-20 11:02:55",
+    "assignee": "李四",
+    "deleteReason": "完成",
+    "result": "",
+    "approvalComments": "同意",
+    "approvalRemark": "测试"
+  }, {
+    "id": "1425059",
+    "nodeName": "提交申请",
+    "startTime": "2016-06-14 15:29:45",
+    "endTime": "2016-06-14 15:29:45",
+    "assignee": "李四",
+    "deleteReason": "发起流程",
+    "result": "",
+    "approvalComments": "",
+    "approvalRemark": ""
+  }],
+  "formData": {
+    "name": "加班申请单",
+    "code": "jbsqbd",
+    "content": [{
+      "title": "编号",
+      "content": "ZQJB00000011",
+      "name": "process_no",
+      "type": "text",
+      "detailType": "text",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": true,
+      "fileName": ""
+    }, {
+      "title": "标题",
+      "content": "加班转办再转办",
+      "name": "process_title",
+      "type": "text",
+      "detailType": "text",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": true,
+      "hide": false,
+      "fileName": ""
+    }, {
+      "title": "申请人",
+      "content": "李四",
+      "name": "sqr",
+      "type": "macros",
+      "detailType": "sys_realname",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": false,
+      "fileName": ""
+    }, {
+      "title": "所在公司",
+      "content": "XX集团",
+      "name": "szgs",
+      "type": "macros",
+      "detailType": "sys_companyname",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": false,
+      "fileName": ""
+    }, {
+      "title": "所在部门",
+      "content": "集团信息技术部",
+      "name": "bm",
+      "type": "macros",
+      "detailType": "sys_dept",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": false,
+      "fileName": ""
+    }, {
+      "title": "职位",
+      "content": "职员",
+      "name": "zw",
+      "type": "macros",
+      "detailType": "sys_post",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": false,
+      "fileName": ""
+    }, {
+      "title": "填报日期",
+      "content": "2016-06-14 15:29:14",
+      "name": "tbrq",
+      "type": "macros",
+      "detailType": "sys_datetime",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": false,
+      "fileName": ""
+    }, {
+      "title": "加班开始时间",
+      "content": "2016-06-15 15:29:51",
+      "name": "kssj",
+      "type": "text",
+      "detailType": "fullDate",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": true,
+      "hide": false,
+      "fileName": ""
+    }, {
+      "title": "加班结束时间",
+      "content": "2016-06-24 15:29:53",
+      "name": "jssj",
+      "type": "text",
+      "detailType": "fullDate",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": true,
+      "hide": false,
+      "fileName": ""
+    }, {
+      "title": "合计小时",
+      "content": "5.00",
+      "name": "hour",
+      "type": "text",
+      "detailType": "float",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": true,
+      "hide": false,
+      "fileName": ""
+    }, {
+      "title": "加班时间",
+      "content": "平日",
+      "name": "jbsj",
+      "type": "radios",
+      "items": [
+        "平日",
+        "休息日",
+        "法定节假日"
+      ],
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": false,
+      "fileName": ""
+    }, {
+      "title": "加班事由",
+      "content": "所谓",
+      "name": "jbsy",
+      "type": "textarea",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": true,
+      "hide": false,
+      "fileName": ""
+    }, {
+      "title": "1",
+      "content": "同意",
+      "name": "approval_comments1",
+      "type": "text",
+      "detailType": "text",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": true,
+      "fileName": ""
+    }, {
+      "title": "1",
+      "content": "",
+      "name": "approval_comments2",
+      "type": "text",
+      "detailType": "text",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": true,
+      "fileName": ""
+    }, {
+      "title": "1",
+      "content": "",
+      "name": "approval_comments3",
+      "type": "text",
+      "detailType": "text",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": true,
+      "fileName": ""
+    }, {
+      "title": "1",
+      "content": "",
+      "name": "approval_comments4",
+      "type": "text",
+      "detailType": "text",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": true,
+      "fileName": ""
+    }, {
+      "title": "1",
+      "content": "",
+      "name": "approval_comments5",
+      "type": "text",
+      "detailType": "text",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": true,
+      "fileName": ""
+    }, {
+      "title": "1",
+      "content": "",
+      "name": "approval_comments6",
+      "type": "text",
+      "detailType": "text",
+      "maxLength": "",
+      "minlength": "",
+      "readOnly": true,
+      "required": false,
+      "hide": true,
+      "fileName": ""
+    }],
+    "listctrlVoList": []
+  }
+};
+export const TASK_LIST_APPROVE_DATA = {
+  "name": "加班申请单6",
+  "code": "jbsqbd6",
+  "content": [{
+    "title": "编号",
+    "content": "ZQJB00000011",
+    "name": "process_no",
+    "type": "text",
+    "detailType": "text",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": false,
+    "hide": true,
+    "fileName": ""
+  }, {
+    "title": "标题",
+    "content": "加班转办再转办",
+    "name": "process_title",
+    "type": "text",
+    "detailType": "text",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": true,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "申请人",
+    "content": "李四",
+    "name": "sqr",
+    "type": "macros",
+    "detailType": "sys_realname",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "所在公司",
+    "content": "XX集团",
+    "name": "szgs",
+    "type": "macros",
+    "detailType": "sys_companyname",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "所在部门",
+    "content": "集团信息技术部",
+    "name": "bm",
+    "type": "macros",
+    "detailType": "sys_dept",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "职位",
+    "content": "职员",
+    "name": "zw",
+    "type": "macros",
+    "detailType": "sys_post",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "填报日期",
+    "content": "2016-06-14 15:29:14",
+    "name": "tbrq",
+    "type": "macros",
+    "detailType": "sys_datetime",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "加班开始时间",
+    "content": "2016-06-15 15:29:51",
+    "name": "kssj",
+    "type": "text",
+    "detailType": "fullDate",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": true,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "加班结束时间",
+    "content": "2016-06-24 15:29:53",
+    "name": "jssj",
+    "type": "text",
+    "detailType": "fullDate",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": true,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "合计小时",
+    "content": "5.00",
+    "name": "hour",
+    "type": "text",
+    "detailType": "float",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": true,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "加班时间",
+    "content": "平日",
+    "name": "jbsj",
+    "type": "radios",
+    "items": [
+      "平日",
+      "休息日",
+      "法定节假日"
+    ],
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "加班事由",
+    "content": "所谓",
+    "name": "jbsy",
+    "type": "textarea",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": true,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "审批意见",
+    "content": "同意",
+    "name": "approval_comments6",
+    "type": "radios",
+    "items": [
+      "同意",
+      "不同意"
+    ],
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "审批备注",
+    "content": "",
+    "name": "approval_remark6",
+    "type": "textarea",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }],
+  "listctrlVoList": []
+};
+export const NODE_BUTTON_DATA = [{
+  color: '#3498db',
+  name: 'delegateTask',
+  label: '协办',
+  type: 2
+}, {
+  color: '#9b59b6',
+  name: 'delegateTask',
+  label: '转办',
+  type: 1
+}];
+export const APPROVE_RESULT_DATA = {
+  processInstanceId: '1425023',
+  code: 'success',
+  msg: '完成流程成功'
+};
+export const OFFICE_ITEM_DATA = [{
+  "id": 22,
+  "name": "采购申请",
+  "priority": 1,
+  "bpmProcesseList": null
+}, {
+  "id": 23,
+  "name": "人事申请",
+  "priority": 2,
+  "bpmProcesseList": null
+}, {
+  "id": 24,
+  "name": "行政申请",
+  "priority": 3,
+  "bpmProcesseList": null
+}, {
+  "id": 25,
+  "name": "财务申请",
+  "priority": 4,
+  "bpmProcesseList": null
+}];
+export const TASK_LIST_CONTENT_DATA = [{
+  "id": 131,
+  "name": "请休假申请",
+  "priority": 1,
+  "descn": "ZQLE"
+}, {
+  "id": 132,
+  "name": "加班申请",
+  "priority": 2,
+  "descn": "ZQJB"
+}, {
+  "id": 133,
+  "name": "未打卡说明",
+  "priority": 3,
+  "descn": "ZQDK"
+}];
+export const TASK_LIST_FORM_DATA = {
+  "code": "qxjbd",
+  "content": [{
+    "title": "编号",
+    "content": "ZQLE",
+    "name": "process_no",
+    "type": "text",
+    "detailType": "text",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": false,
+    "hide": true,
+    "fileName": ""
+  }, {
+    "title": "标题",
+    "content": "",
+    "name": "process_title",
+    "type": "text",
+    "detailType": "text",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": true,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "申请人",
+    "content": "",
+    "name": "sqr",
+    "type": "macros",
+    "detailType": "sys_realname",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "所在公司",
+    "content": "",
+    "name": "szgs",
+    "type": "macros",
+    "detailType": "sys_companyname",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "所在部门",
+    "content": "",
+    "name": "bm",
+    "type": "macros",
+    "detailType": "sys_dept",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "职位",
+    "content": "",
+    "name": "zw",
+    "type": "macros",
+    "detailType": "sys_post",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": true,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "假期类别",
+    "content": "年假",
+    "name": "jqlb",
+    "type": "select",
+    "items": [
+      "年假",
+      "事假",
+      "病假",
+      "调休",
+      "婚假",
+      "产假",
+      "陪产假",
+      "丧假",
+      "其他"
+    ],
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": true,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "请假开始时间",
+    "content": "",
+    "name": "kssj",
+    "type": "text",
+    "detailType": "fullDate",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": true,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "请假结束时间",
+    "content": "",
+    "name": "jssj",
+    "type": "text",
+    "detailType": "fullDate",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": true,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "合计天",
+    "content": "",
+    "name": "day",
+    "type": "text",
+    "detailType": "int",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": true,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "合计小时",
+    "content": "",
+    "name": "hour",
+    "type": "text",
+    "detailType": "float",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": true,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "理由",
+    "content": "",
+    "name": "ly",
+    "type": "textarea",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": true,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "工作交接",
+    "content": "",
+    "name": "gzjj",
+    "type": "textarea",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "附件",
+    "content": "",
+    "name": "fj",
+    "type": "text",
+    "detailType": "file",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": false,
+    "hide": false,
+    "fileName": ""
+  }, {
+    "title": "1",
+    "content": "",
+    "name": "approval_comments1",
+    "type": "text",
+    "detailType": "text",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": false,
+    "hide": true,
+    "fileName": ""
+  }, {
+    "title": "1",
+    "content": "",
+    "name": "approval_comments2",
+    "type": "text",
+    "detailType": "text",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": false,
+    "hide": true,
+    "fileName": ""
+  }, {
+    "title": "1",
+    "content": "",
+    "name": "approval_comments3",
+    "type": "text",
+    "detailType": "text",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": false,
+    "hide": true,
+    "fileName": ""
+  }, {
+    "title": "1",
+    "content": "",
+    "name": "approval_comments4",
+    "type": "text",
+    "detailType": "text",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": false,
+    "hide": true,
+    "fileName": ""
+  }, {
+    "title": "1",
+    "content": "",
+    "name": "approval_comments5",
+    "type": "text",
+    "detailType": "text",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": false,
+    "hide": true,
+    "fileName": ""
+  }, {
+    "title": "1",
+    "content": "",
+    "name": "approval_comments6",
+    "type": "text",
+    "detailType": "text",
+    "maxLength": "",
+    "minlength": "",
+    "readOnly": false,
+    "required": false,
+    "hide": true,
+    "fileName": ""
+  }],
+  "listctrlVoList": []
+};
+export const TASK_LIST_FORM_COMMIT_DATA = {
+  processInstanceId: '1463203',
+  code: 'success',
+  msg: '启动流程成功'
+};

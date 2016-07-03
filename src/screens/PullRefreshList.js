@@ -44,7 +44,6 @@ class PullRefreshList extends Component {
 
   render() {
     if(!this.listView){
-      console.warn('pull Refresh constructor');
       this.listView = this.getListView();
     }
     return (

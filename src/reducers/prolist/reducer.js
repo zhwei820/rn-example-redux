@@ -8,7 +8,6 @@ const initialState = Immutable({
 export default function screens(state = initialState, action = {}) {
   switch (action.type) {
     case types.ORDERTAB1:
-      console.warn("dddddd");
       state.orderTabId = 1
       return state;
     case types.ORDERTAB2:

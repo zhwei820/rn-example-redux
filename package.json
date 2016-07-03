@@ -14,14 +14,17 @@
     "react": "0.14.5",
     "react-native": "0.25.1",
     "react-native-gifted-spinner": "0.0.4",
-    "react-native-navigation": "../",
+    "react-native-navigation": "*",
     "react-native-parallax-scroll-view": "^0.19.0",
     "react-native-progress": "^3.0.0",
     "react-native-simple-store": "^1.0.1",
     "react-native-viewpager": "^0.2.9",
+    "react-native-network-info": "^0.2.0",
+
     "react-redux": "^4.0.6",
     "redux": "^3.0.5",
     "redux-thunk": "^1.0.3",
+    "react-native-fs": "^1.2.0",
     "seamless-immutable": "^5.0.1"
   }
 }

@@ -1,9 +1,17 @@
 import app from './app/reducer';
 import counter from './counter/reducer';
 import screens from './screens/reducer';
+import userInfo from './userInfo/userInfo';
+import login from './login/login';
+import webview from './webview/webview';
+import tabOffice from './tabOffice/tabOffice';
 
 export {
   app,
   counter,
-  screens
+  screens,
+  userInfo,
+  login,
+  webview,
+  tabOffice,
 };
