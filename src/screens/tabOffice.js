@@ -113,19 +113,26 @@ export default class OfficeTab extends React.Component {
       return;
     }
     const {navigator} = this.props;
-    // navigator.push({
-    //   name: 'officeTemplateList',
-    //   templateOption: templateOption,
-    //   component: OfficeTemplateListContainer,
-    // });
+    this.props.navigator.push({
+      title: templateOption.name,
+      screen: "example.officeTemplateList",
+      animated: true,
+      passProps: {
+        templateOption: templateOption,
+      }
+
+    })
   }
 
   onCreated() {
-    const {navigator} = this.props;
     this.props.navigator.push({
-      title: "More",
+      title: "我的申请",
       screen: "example.taskList",
       animated: true,
+      passProps: {
+        url: OFFICE_CREATED,
+      }
+
     })
 
   }

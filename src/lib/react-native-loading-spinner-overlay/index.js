@@ -23,7 +23,6 @@ import {
   Text,
 } from 'react-native';
 
-import autobind from 'autobind-decorator';
 import GiftedSpinner from 'react-native-gifted-spinner';
 
 const styles = StyleSheet.create({

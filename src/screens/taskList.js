@@ -20,14 +20,14 @@ import {
 import Colors from '../constant/Colors';
 // import NavigationBar from '../component/ZqOfficeNavigationBar';
 import PostCell from "../component/postCell/TodoPostCell";
-import {fetchTaskList} from '../reducers/taskList/taskList';
+import {fetchTaskList} from '../reducers/taskList/taskListAction';
 // import TaskDetailContainer from '../containers/TaskDetailContainer';
 import Spinner from '../lib/react-native-loading-spinner-overlay';
-import {startHandleTimeConsuming, stopHandleTimeConsuming} from '../actions/timeConsuming';
-import JPush from 'react-native-jpush';
-import * as types from '../constant/NavigatorTypes';
+import {startHandleTimeConsuming, stopHandleTimeConsuming} from '../reducers/timeConsuming/timeConsumingAction';
+// import * as types from '../constant/NavigatorTypes';
 import {showAlert} from '../utils/RequestUtils';
 import LoadMoreFooter from '../component/LoadMoreFooter';
+import { connect } from 'react-redux';
 
 const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
@@ -63,9 +63,9 @@ class TaskList extends React.Component {
     const {taskList} = nextProps;
     if(taskList.taskListFetched){
       canLoadMore = true;
-      nextProps.dispatch(stopHandleTimeConsuming());
+      // nextProps.dispatch(stopHandleTimeConsuming());
       if(taskList.error){
-        showAlert(taskList.error);
+        // showAlert(taskList.error);
       }
     }
   }
@@ -80,30 +80,32 @@ class TaskList extends React.Component {
 
   componentDidMount() {
     const {dispatch, route, login, navigator} = this.props;
-    if(Platform.OS == 'ios' && login.rawData) {
+    if(
+      // Platform.OS == 'ios' &&
+      login.rawData) {
       page = 1;
       canLoadMore = false;
       onEndReach = false;
-      dispatch(fetchTaskList(route.url + 'userId=', login.rawData.userId, this.state.searchId, this.state.searchTitle, '', page));
-      dispatch(startHandleTimeConsuming());
+      dispatch(fetchTaskList(this.props.url + 'userId=', login.rawData.userId, this.state.searchId, this.state.searchTitle, '', page));
+      // dispatch(startHandleTimeConsuming());
     }
 
-    this.didFocusSubscription = navigator.navigationContext.addListener('willfocus', (event) => {
-      if(event.data.route.name == 'TaskListContainer' && event.data.route.type == types.TASK_LIST_NORMAL)
-        if(login.rawData) {
-          page = 1;
-          canLoadMore = false;
-          onEndReach = false;
-          dispatch(fetchTaskList(route.url + 'userId=', login.rawData.userId, this.state.searchId, this.state.searchTitle, '', page));
-          dispatch(startHandleTimeConsuming());
-        }
-    });
-    title = route.navBarTitle;
+    // this.didFocusSubscription = navigator.navigationContext.addListener('willfocus', (event) => {
+    //   if(event.data.route.name == 'TaskListContainer' && event.data.route.type == types.TASK_LIST_NORMAL)
+    //     if(login.rawData) {
+    //       page = 1;
+    //       canLoadMore = false;
+    //       onEndReach = false;
+    //       dispatch(fetchTaskList(this.props.url + 'userId=', login.rawData.userId, this.state.searchId, this.state.searchTitle, '', page));
+    //       dispatch(startHandleTimeConsuming());
+    //     }
+    // });
+    // title = route.navBarTitle;
   }
 
   componentWillUnmount() {
     page = 1;
-    this.didFocusSubscription.remove();
+    // this.didFocusSubscription.remove();
   }
 
   renderSelect(){
@@ -145,7 +147,7 @@ class TaskList extends React.Component {
           page = 1;
           canLoadMore = false;
           onEndReach = false;
-          dispatch(fetchTaskList(route.url + 'userId=', login.rawData.userId, id, '', '', page));
+          dispatch(fetchTaskList(this.props.url + 'userId=', login.rawData.userId, id, '', '', page));
           dispatch(startHandleTimeConsuming());
           this.setState({searchId: id, isSelect:true});
         }}>
@@ -220,11 +222,6 @@ class TaskList extends React.Component {
     const {taskList, login, route, dispatch} = this.props;
     return(
        <View style={styles.container}>
-         <NavigationBar title={title} titleColor={Colors.white}
-           backgroundColor={Colors.mainColor} onLeftButtonPress={this.onLeftBack}
-           leftButtonIcon={require('../img/office/icon-backs.png')}
-           rightButtonTitle={'搜索'} rightButtonTitleColor={'#fff'}
-           onRightButtonPress={this.onSearch}/>
          <View style={styles.searchContainer}>
            <View style={styles.searchInputContainer}>
              <View style={styles.pickerContainer}>
@@ -240,9 +237,7 @@ class TaskList extends React.Component {
            </View>
          </View>
          {this.renderListView()}
-         <View>
-           <Spinner visible={taskList.taskListFetching} text={'加载中,请稍后...'}/>
-         </View>
+
          {this.renderModel()}
        </View>
     );
@@ -274,7 +269,7 @@ class TaskList extends React.Component {
     page = 1;
     canLoadMore = false;
     onEndReach = false;
-    dispatch(fetchTaskList(route.url + 'userId=', login.rawData.userId, this.state.searchId, this.state.searchTitle, '', page));
+    dispatch(fetchTaskList(this.props.url + 'userId=', login.rawData.userId, this.state.searchId, this.state.searchTitle, '', page));
     dispatch(startHandleTimeConsuming());
   }
 
@@ -284,7 +279,7 @@ class TaskList extends React.Component {
     if (canLoadMore && onEndReach) {
       if(taskList.taskListHasMore)
         page ++;
-      dispatch(fetchTaskList(route.url + 'userId=', login.rawData.userId, this.state.searchId, this.state.searchTitle, '', page));
+      dispatch(fetchTaskList(this.props.url + 'userId=', login.rawData.userId, this.state.searchId, this.state.searchTitle, '', page));
       canLoadMore = false;
     }
   }
