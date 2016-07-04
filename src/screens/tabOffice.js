@@ -112,7 +112,6 @@ export default class OfficeTab extends React.Component {
       Alert.alert('', '功能研发中，敬请期待！', [ {text: '确定', onPress: ()=>{}}]);
       return;
     }
-    const {navigator} = this.props;
     this.props.navigator.push({
       title: templateOption.name,
       screen: "example.officeTemplateList",

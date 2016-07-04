@@ -83,6 +83,16 @@ class OfficeTemplateList extends React.Component {
     //   component: OfficeFormContainer,
     //   officeFormData: officeFormData,
     // });
+    this.props.navigator.push({
+      title: officeFormData.name,
+      screen: "example.OfficeForm",
+      animated: true,
+      passProps: {
+        officeFormData: officeFormData,
+      }
+
+    })
+
   }
 };
 

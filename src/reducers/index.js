@@ -8,6 +8,8 @@ import tabOffice from './tabOffice/tabOffice';
 import taskList from './taskList/taskList';
 import timeConsuming from './timeConsuming/timeConsuming';
 import officeTemplateList from './officeTemplateList/officeTemplateList';
+import officeForm from './officeForm/officeForm';
+
 
 export {
   app,
@@ -20,4 +22,5 @@ export {
   taskList,
   timeConsuming,
   officeTemplateList,
+  officeForm,
 };

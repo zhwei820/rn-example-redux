@@ -11,6 +11,8 @@ import tabOffice from './tabOffice';
 import webview from './webview';
 import taskList from './taskList';
 import officeTemplateList from './officeTemplateList';
+import officeForm from './officeForm';
+import taskDetail from './taskDetail';
 
 
 // register all screens of the app (including internal ones)
@@ -26,5 +28,7 @@ export function registerScreens(store, Provider) {
   Navigation.registerComponent('example.webview', () => webview, store, Provider);
   Navigation.registerComponent('example.taskList', () => taskList, store, Provider);
   Navigation.registerComponent('example.officeTemplateList', () => officeTemplateList, store, Provider);
+  Navigation.registerComponent('example.officeForm', () => officeForm, store, Provider);
+  Navigation.registerComponent('example.taskDetail', () => taskDetail, store, Provider);
 
 }

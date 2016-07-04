@@ -20,7 +20,7 @@ import api from "../../constant/Network";
 import {Base64Encode, Base64Decode} from '../../utils/Base64';
 import Spinner from '../../lib/react-native-loading-spinner-overlay';
 import {connect} from 'react-redux';
-import {startHandleTimeConsuming, stopHandleTimeConsuming} from '../../actions/timeConsuming';
+import {startHandleTimeConsuming, stopHandleTimeConsuming} from '../../reducers/timeConsuming/timeConsumingAction';
 
 const deviceHeight = Dimensions.get('window').height-10;
 const deviceWidth = Dimensions.get('window').width;

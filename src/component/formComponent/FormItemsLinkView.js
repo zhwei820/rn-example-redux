@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import Colors from '../../constant/Colors';
-import TaskDetailContainer from '../../containers/TaskDetailContainer';
+// import TaskDetailContainer from '../../containers/TaskDetailContainer';
 
 export default class FormItemsLinkView extends React.Component{
   constructor(props) {
@@ -45,12 +45,19 @@ export default class FormItemsLinkView extends React.Component{
     onPress(){
         if(this.state.row.readOnly){
             if(this.state.row.content && this.state.row.content != ''){
+                // this.props.navigator.push({
+                //   name: 'taskDetail',
+                //   component: TaskDetailContainer,
+                //   type: 'link',
+                //   linkedProcessNo: this.state.row.content,
+                // });
                 this.props.navigator.push({
-                  name: 'taskDetail',
-                  component: TaskDetailContainer,
-                  type: 'link',
-                  linkedProcessNo: this.state.row.content,
-                });
+                  title: "More",
+                  screen: "example.taskDetail",
+                  animated: true,
+                  
+                })
+
             }
         } else {
             Alert.alert('','抱歉!现在移动端的关联单不提供输入.',[{text: '确定',onPress: ()=>{}}])
