@@ -9,6 +9,7 @@ import taskList from './taskList/taskList';
 import timeConsuming from './timeConsuming/timeConsuming';
 import officeTemplateList from './officeTemplateList/officeTemplateList';
 import officeForm from './officeForm/officeForm';
+import taskDetail from './taskDetail/taskDetail';
 
 
 export {
@@ -23,4 +24,5 @@ export {
   timeConsuming,
   officeTemplateList,
   officeForm,
+  taskDetail,
 };

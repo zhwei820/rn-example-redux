@@ -13,7 +13,7 @@ import {
 
 import Colors from '../../constant/Colors';
 import * as types from '../../constant/NavigatorTypes';
-import StaffListContainer from '../../containers/StaffListContainer';
+// import StaffListContainer from '../../containers/StaffListContainer';
 
 export default class FormItemsSelectStaff extends React.Component{
   constructor(props) {
@@ -58,12 +58,12 @@ export default class FormItemsSelectStaff extends React.Component{
 
   onSearch() {
     const {navigator} = this.props;
-    navigator.push({
-      name: "StaffList",
-      component: StaffListContainer,
-      type: types.STAFF_LIST_CONTACT,
-      onStaffSelect: this.handleChange,
-    });
+    // navigator.push({
+    //   name: "StaffList",
+    //   component: StaffListContainer,
+    //   type: types.STAFF_LIST_CONTACT,
+    //   onStaffSelect: this.handleChange,
+    // });
   }
 }
 

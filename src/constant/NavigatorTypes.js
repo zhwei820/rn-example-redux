@@ -1,0 +1,11 @@
+'use strict';
+//taskList
+export const TASK_LIST_NORMAL = 'TASK_LIST_NORMAL';
+//contactList
+export const CONTACT_LIST_BASE = 'CONTACT_LIST_BASE';
+export const CONTACT_LIST_BUILDER = 'CONTACT_LIST_BUILDER';
+export const CONTACT_LIST_DETAIL = 'CONTACT_LIST_DETAIL';
+export const CONTACT_LIST_APPROVE = 'CONTACT_LIST_APPROVE';
+//staffList
+export const STAFF_LIST_NORMAL = 'STAFF_LIST_NORMAL';
+export const STAFF_LIST_CONTACT = 'STAFF_LIST_CONTACT';

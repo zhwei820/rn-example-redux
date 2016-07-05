@@ -16,12 +16,12 @@ import {connect} from 'react-redux';
 import Colors from '../constant/Colors';
 // import NavigationBar from '../component/ZqOfficeNavigationBar';
 import AttachmentDownload from '../component/AttachmentDownload';
-import {fetchTaskDetail} from '../actions/taskDetail';
+import {fetchTaskDetail} from '../reducers/taskDetail/taskDetailAction';
 // import TaskApprovalContainer from '../containers/TaskApprovalContainer';
-import readTable from './readTable';
-import Spinner from '../lib/react-native-loading-spinner-overlay';
+// import readTable from './readTable';
+// import Spinner from '../lib/react-native-loading-spinner-overlay';
 // import TaskDetailContainer from '../containers/TaskDetailContainer';
-import {startHandleTimeConsuming, stopHandleTimeConsuming} from '../actions/timeConsuming';
+import {startHandleTimeConsuming, stopHandleTimeConsuming} from '../reducers/timeConsuming/timeConsumingAction';
 import {TASKDETAIL_URL, LINK_TASK} from '../constant/Network';
 import {showAlert} from '../utils/RequestUtils';
 
@@ -81,11 +81,11 @@ class taskDetail extends React.Component {
     return  taskDetail.tableList.map((rowData) => {
       return (
         <TouchableOpacity onPress={() => {
-          navigator.push({
-            name: "ReadTable",
-            component: readTable,
-            tableData: rowData,
-          });
+          // navigator.push({
+          //   name: "ReadTable",
+          //   component: readTable,
+          //   tableData: rowData,
+          // });
         }}>
           <Text style={{alignSelf:'center',marginTop:8,marginBottom:8,color:'#36a9e1',fontSize:16,}}>{rowData.code}>></Text>
         </TouchableOpacity>
@@ -213,9 +213,7 @@ class taskDetail extends React.Component {
           </View>
         </ScrollView>
         {this.renderFAB()}
-        <View>
-          <Spinner visible={taskDetail.taskDetailFetching} text={'加载中,请稍后...'}/>
-        </View>
+
       </View>
     );
   }

@@ -22,7 +22,7 @@ import SelectItem from "../component/selectItem";
 import ModalCalendar from "../component/modalCalendar";
 // import OfficeTableContainer from '../containers/OfficeTableContainer';
 import Spinner from '../lib/react-native-loading-spinner-overlay';
-import {fetchOfficeForm, changeKeyboardSpace, handleUserInput, assignTableData, fetchCommitOfficeForm} from "../actions/officeForm";
+import {fetchOfficeForm, changeKeyboardSpace, handleUserInput, assignTableData, fetchCommitOfficeForm} from "../reducers/officeForm/officeFormAction";
 import {startHandleTimeConsuming, stopHandleTimeConsuming} from '../reducers/timeConsuming/timeConsumingAction';
 import {showAlert} from '../utils/RequestUtils';
 var FileUpload = require('NativeModules').FileUpload;
@@ -91,7 +91,7 @@ export default class officeForm extends React.Component {
 
   componentDidMount() {
     const {dispatch, route} = this.props;
-    dispatch(fetchOfficeForm(route.officeFormData.id));
+    dispatch(fetchOfficeForm(this.props.officeFormData.id));
     dispatch(startHandleTimeConsuming());
     if (Platform.OS === 'ios') {
       dispatch(changeKeyboardSpace(0));
@@ -186,7 +186,7 @@ export default class officeForm extends React.Component {
       const {officeForm, route, dispatch, login} = this.props;
       dispatch(startHandleTimeConsuming());
       dispatch(fetchCommitOfficeForm(officeForm.formInputData, officeForm.tableData,
-        route.officeFormData.id, login.rawData.userId));
+        this,props.officeFormData.id, login.rawData.userId));
     }
   }
 

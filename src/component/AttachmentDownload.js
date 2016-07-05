@@ -16,7 +16,7 @@ import Intent from 'react-native-android-intent';
 let path = Platform.OS === 'ios' ? `${FileManager.DocumentDirectoryPath}/attachment/`:'/sdcard/attachment/';
 let filePath;
 // import WebviewContainer from '../containers/WebviewContainer';
-import {changeWebviewUrl} from '../../reducers/webview/webviewAction';
+import {changeWebviewUrl} from '../reducers/webview/webviewAction';
 export default class AttachmentDownload extends React.Component{
   constructor(props){
     super(props);
