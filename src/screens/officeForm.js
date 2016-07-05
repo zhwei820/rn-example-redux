@@ -32,11 +32,28 @@ var inputItems = [];
 var formView = <View/>;
 var tableView = <View/>;
 
-export default class officeForm extends React.Component {
+class officeForm extends React.Component {
+  static navigatorStyle = {
+    statusBarColor: '#303F9F',
+    toolBarColor: '#3F51B5',
+    navigationBarColor: '#303F9F',
+    tabSelectedTextColor: '#FFA000',
+    tabNormalTextColor: '#FFC107',
+    tabIndicatorColor: '#FFA000'
+  };
+
+  static navigatorButtons = {
+    rightButtons: [
+      {
+        title: 'Edit',
+        id: 'edit'
+      },
+
+    ]
+  };
   constructor(props) {
     super(props);
 
-    this.onLeftBack = this.onLeftBack.bind(this);
     this.onCommit = this.onCommit.bind(this);
     this.updateKeyboardSpace = this.updateKeyboardSpace.bind(this);
     this.resetKeyboardSpace = this.resetKeyboardSpace.bind(this);
@@ -165,10 +182,6 @@ export default class officeForm extends React.Component {
         <DatePicker ref={'datepicker'}/>
         <DateTimePicker ref={'datetimepicker'}/>
         <SelectItem ref={'selectItem'}/>
-        <View>
-          <Spinner visible={officeForm.formFetching} text={'加载中,请稍后...'}/>
-          <Spinner visible={officeForm.formCommitting} text={'提交中,请稍后...'}/>
-        </View>
       </View>
     );
   }

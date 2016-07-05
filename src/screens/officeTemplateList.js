@@ -71,10 +71,6 @@ class OfficeTemplateList extends React.Component {
     );
   }
 
-  onLeftBack() {
-    const {navigator} = this.props;
-    navigator.pop();
-  }
 
   onSelect(officeFormData){
     // const {navigator} = this.props;
@@ -85,9 +81,9 @@ class OfficeTemplateList extends React.Component {
     // });
 
     this.props.navigator.push({
-      
+
       title: officeFormData.name,
-      screen: "example.OfficeForm",
+      screen: "example.officeForm",
       animated: true,
       passProps: {
         officeFormData: officeFormData,
